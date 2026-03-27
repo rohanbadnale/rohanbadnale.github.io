@@ -1,122 +1,130 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>My Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohan Badnale - Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: #0f172a;
+            color: white;
+        }
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #e2e8f0;
-    }
+        header {
+            text-align: center;
+            padding: 40px;
+            background: linear-gradient(to right, #06b6d4, #3b82f6);
+        }
 
-    header {
-      background: #020617;
-      padding: 20px;
-      text-align: center;
-    }
+        header img {
+            width: 120px;
+            border-radius: 50%;
+            border: 3px solid white;
+        }
 
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
+        h1 {
+            margin: 10px 0;
+        }
 
-    nav {
-      margin-top: 10px;
-    }
+        section {
+            padding: 20px;
+        }
 
-    nav a {
-      color: #38bdf8;
-      margin: 0 10px;
-      text-decoration: none;
-    }
+        .card {
+            background: #1e293b;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
 
-    section {
-      padding: 50px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
+        .card:hover {
+            transform: scale(1.05);
+        }
 
-    .card {
-      background: #1e293b;
-      padding: 20px;
-      margin: 15px 0;
-      border-radius: 10px;
-    }
+        h2 {
+            color: #38bdf8;
+        }
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #020617;
-      margin-top: 30px;
-    }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
 
-    button {
-      background: #38bdf8;
-      border: none;
-      padding: 10px 20px;
-      color: black;
-      border-radius: 5px;
-      cursor: pointer;
-    }
+        li {
+            padding: 5px 0;
+        }
 
-    button:hover {
-      background: #0ea5e9;
-    }
-  </style>
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background: #22c55e;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #020617;
+        }
+    </style>
 </head>
 
 <body>
 
 <header>
-  <h1>My Portfolio</h1>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
+    <img src="https://via.placeholder.com/120" alt="Profile Photo">
+    <h1>Rohan Badnale</h1>
+    <p>Student | Web Developer 🚀</p>
 </header>
 
-<section id="about">
-  <h2>Hi I'am Anand Shinde</h2>
-  <p>Web developer<p>
-    <p>I studing BCA(SY)(Bachelor Of Computer Application) at Swami Vivekanand Mahavidyalaya, Udgir. <p>
-        <img src="PG File (.JPG)"alt="DSC_1234 11">a
+<section>
+    <h2>About Me</h2>
+    <div class="card">
+        <p>I am a BCA student passionate about coding and building websites.</p>
+    </div>
 </section>
 
-<section id="projects">
-  <h2>🚀 Projects</h2>
-
-  <div class="card">
-    <h3>Project 1</h3>
-    <p>A simple website I built.</p>
-  </div>
-
-  <div class="card">
-    <h3>Project 2</h3>
-    <p>Another cool project.</p>
-  </div>
-
+<section>
+    <h2>Skills</h2>
+    <div class="card">
+        <ul>
+            <li>HTML & CSS</li>
+            <li>C Programming</li>
+            <li>Java (Basics)</li>
+            <li>GitHub</li>
+        </ul>
+    </div>
 </section>
 
-<section id="contact">
-  <h2>📩 Contact</h2>
-  <p>Email: your@email.com</p>
-  <button onclick="sayHi()">Say Hello</button>
+<section>
+    <h2>Projects</h2>
+    <div class="card">
+        <p>✔ Personal Portfolio Website</p>
+        <p>✔ Calculator using C</p>
+    </div>
+</section>
+
+<section>
+    <h2>Resume</h2>
+    <div class="card">
+        <a href="resume.pdf" class="btn" download>Download Resume 📄</a>
+    </div>
+</section>
+
+<section>
+    <h2>Contact</h2>
+    <div class="card">
+        <p>Email: youremail@gmail.com</p>
+    </div>
 </section>
 
 <footer>
-  <p>© 2026 My Website</p>
+    <p>© 2026 Rohan Badnale</p>
 </footer>
-
-<script>
-  function sayHi() {
-    alert("Thanks for visiting my website!");
-  }
-</script>
 
 </body>
 </html>
