@@ -1,83 +1,122 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Rohan Badnale - Resume</title>
-    <style>
-        body {
-            font-family: Arial;
-            margin: 0;
-            background: #0f172a;
-            color: white;
-        }
-        header {
-            background: #1e293b;
-            padding: 20px;
-            text-align: center;
-        }
-        section {
-            padding: 20px;
-        }
-        h1, h2 {
-            color: #38bdf8;
-        }
-        .card {
-            background: #1e293b;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 10px;
-        }
-        footer {
-            text-align: center;
-            padding: 10px;
-            background: #020617;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>My Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+    }
+
+    header {
+      background: #020617;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #38bdf8;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 50px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #020617;
+      margin-top: 30px;
+    }
+
+    button {
+      background: #38bdf8;
+      border: none;
+      padding: 10px 20px;
+      color: black;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0ea5e9;
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
-    <h1>Rohan Badnale</h1>
-    <p>Student | Future Developer 💻</p>
+  <h1>My Portfolio</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
-<section>
-    <h2>About Me</h2>
-    <div class="card">
-        <p>I am a BCA student learning web development and programming.</p>
-    </div>
+<section id="about">
+  <h2>Hi I'am Anand Shinde</h2>
+  <p>Web developer<p>
+    <p>I studing BCA(SY)(Bachelor Of Computer Application) at Swami Vivekanand Mahavidyalaya, Udgir. <p>
+        <img src="PG File (.JPG)"alt="DSC_1234 11">a
 </section>
 
-<section>
-    <h2>Skills</h2>
-    <div class="card">
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>C Programming</li>
-            <li>Java (Basics)</li>
-        </ul>
-    </div>
+<section id="projects">
+  <h2>🚀 Projects</h2>
+
+  <div class="card">
+    <h3>Project 1</h3>
+    <p>A simple website I built.</p>
+  </div>
+
+  <div class="card">
+    <h3>Project 2</h3>
+    <p>Another cool project.</p>
+  </div>
+
 </section>
 
-<section>
-    <h2>Projects</h2>
-    <div class="card">
-        <p>✔ Personal Website using GitHub Pages</p>
-        <p>✔ Basic Calculator in C</p>
-    </div>
-</section>
-
-<section>
-    <h2>Contact</h2>
-    <div class="card">
-        <p>Email: youremail@gmail.com</p>
-    </div>
+<section id="contact">
+  <h2>📩 Contact</h2>
+  <p>Email: your@email.com</p>
+  <button onclick="sayHi()">Say Hello</button>
 </section>
 
 <footer>
-    <p>© 2026 Rohan Badnale</p>
+  <p>© 2026 My Website</p>
 </footer>
+
+<script>
+  function sayHi() {
+    alert("Thanks for visiting my website!");
+  }
+</script>
 
 </body>
 </html>
