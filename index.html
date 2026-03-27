@@ -1,31 +1,83 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Rohan's Website</title>
+    <title>Rohan Badnale - Resume</title>
     <style>
         body {
-            background-color: black;
-            color: white;
-            text-align: center;
             font-family: Arial;
+            margin: 0;
+            background: #0f172a;
+            color: white;
         }
-        h1 {
-            color: cyan;
+        header {
+            background: #1e293b;
+            padding: 20px;
+            text-align: center;
         }
-        button {
+        section {
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #38bdf8;
+        }
+        .card {
+            background: #1e293b;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+        }
+        footer {
+            text-align: center;
             padding: 10px;
-            background: orange;
-            border: none;
-            cursor: pointer;
+            background: #020617;
         }
     </style>
 </head>
+
 <body>
 
-    <h1>Welcome to Rohan's Website 🚀</h1>
-    <p>I am learning web development</p>
+<header>
+    <h1>Rohan Badnale</h1>
+    <p>Student | Future Developer 💻</p>
+</header>
 
-    <button onclick="alert('Hello Rohan!')">Click Me</button>
+<section>
+    <h2>About Me</h2>
+    <div class="card">
+        <p>I am a BCA student learning web development and programming.</p>
+    </div>
+</section>
+
+<section>
+    <h2>Skills</h2>
+    <div class="card">
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>C Programming</li>
+            <li>Java (Basics)</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <h2>Projects</h2>
+    <div class="card">
+        <p>✔ Personal Website using GitHub Pages</p>
+        <p>✔ Basic Calculator in C</p>
+    </div>
+</section>
+
+<section>
+    <h2>Contact</h2>
+    <div class="card">
+        <p>Email: youremail@gmail.com</p>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Rohan Badnale</p>
+</footer>
 
 </body>
 </html>
