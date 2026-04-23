@@ -5,10 +5,12 @@
   font-family: 'Poppins', sans-serif;
   }
 
+/* Smooth scroll */
 html {
 scroll-behavior: smooth;
 }
 
+/* Body */
 body {
 background: linear-gradient(135deg, #020617, #0f172a);
 color: white;
@@ -18,10 +20,17 @@ color: white;
 nav {
 display: flex;
 justify-content: space-between;
+align-items: center;
 padding: 20px 60px;
 background: rgba(0,0,0,0.5);
+backdrop-filter: blur(10px);
 position: sticky;
 top: 0;
+z-index: 100;
+}
+
+nav h2 {
+color: #38bdf8;
 }
 
 nav ul {
@@ -36,14 +45,24 @@ margin-left: 25px;
 nav a {
 color: white;
 text-decoration: none;
+transition: 0.3s;
 }
 
-/* HERO */
+nav a:hover {
+color: #38bdf8;
+}
+
+/* HERO SECTION */
 .hero {
 display: flex;
 justify-content: space-around;
 align-items: center;
 padding: 100px 50px;
+flex-wrap: wrap;
+}
+
+.hero-text {
+max-width: 500px;
 }
 
 .hero-text h1 {
@@ -54,21 +73,35 @@ font-size: 45px;
 color: #38bdf8;
 }
 
-.hero button {
-margin-top: 20px;
-padding: 10px 25px;
-border: none;
-background: #38bdf8;
-cursor: pointer;
+.hero-text p {
+margin-top: 10px;
+color: #cbd5f5;
 }
 
+.hero button {
+margin-top: 20px;
+padding: 12px 25px;
+border: none;
+border-radius: 8px;
+background: #38bdf8;
+cursor: pointer;
+transition: 0.3s;
+}
+
+.hero button:hover {
+background: #0ea5e9;
+transform: scale(1.05);
+}
+
+/* PROFILE IMAGE */
 .profile {
 width: 220px;
 border-radius: 50%;
-border: 3px solid white;
+border: 3px solid #38bdf8;
+box-shadow: 0 0 20px rgba(56,189,248,0.5);
 }
 
-/* SECTIONS */
+/* SECTION */
 .section {
 padding: 80px 20px;
 text-align: center;
@@ -77,25 +110,41 @@ text-align: center;
 .section h2 {
 margin-bottom: 20px;
 color: #38bdf8;
+font-size: 30px;
+}
+
+/* SUB HEADINGS */
+h3 {
+margin-top: 30px;
+color: #94a3b8;
 }
 
 /* SKILLS */
 .skill {
 width: 60%;
 margin: 20px auto;
+text-align: left;
+}
+
+.skill p {
+margin-bottom: 5px;
 }
 
 .bar {
 height: 10px;
 background: #1e293b;
+border-radius: 5px;
+overflow: hidden;
 }
 
 .bar div {
 height: 10px;
 background: #38bdf8;
+border-radius: 5px;
+transition: width 1s ease-in-out;
 }
 
-/* CARDS (GLASS EFFECT) */
+/* PROJECT CARDS */
 .card {
 width: 60%;
 margin: 20px auto;
@@ -113,4 +162,35 @@ transition: 0.3s;
 
 .card:hover {
 transform: translateY(-10px);
+box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* CONTACT */
+#contact p {
+margin: 10px 0;
+color: #cbd5f5;
+}
+
+/* RESPONSIVE (MOBILE) */
+@media(max-width: 768px) {
+
+```
+nav {
+    flex-direction: column;
+}
+
+.hero {
+    flex-direction: column;
+    text-align: center;
+}
+
+.profile {
+    margin-top: 20px;
+}
+
+.skill, .card {
+    width: 90%;
+}
+```
+
 }
