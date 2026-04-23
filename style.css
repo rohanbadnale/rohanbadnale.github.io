@@ -41,7 +41,6 @@ margin-left: 25px;
 nav a {
 color: white;
 text-decoration: none;
-transition: 0.3s;
 }
 
 nav a:hover {
@@ -84,7 +83,7 @@ transition: 0.3s;
 background: #0ea5e9;
 }
 
-/* PROFILE IMAGE WITH HOVER */
+/* PROFILE IMAGE */
 .profile {
 width: 250px;
 border-radius: 50%;
@@ -150,6 +149,32 @@ transition: 0.3s;
 transform: translateY(-8px);
 }
 
+/* FORM */
+form {
+width: 60%;
+margin: auto;
+display: flex;
+flex-direction: column;
+}
+
+form input, form textarea {
+margin: 10px 0;
+padding: 10px;
+border: none;
+border-radius: 5px;
+}
+
+form button {
+padding: 10px;
+background: #38bdf8;
+border: none;
+cursor: pointer;
+}
+
+form button:hover {
+background: #0ea5e9;
+}
+
 /* CONTACT */
 #contact p {
 margin: 10px;
@@ -164,7 +189,7 @@ text-align: center;
 }
 
 ```
-.skill, .card {
+.skill, .card, form {
     width: 90%;
 }
 
