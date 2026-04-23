@@ -1,130 +1,95 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
 <head>
-    <title>Rohan Badnale - Portfolio</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial;
-            background: #0f172a;
-            color: white;
-        }
-
-        header {
-            text-align: center;
-            padding: 40px;
-            background: linear-gradient(to right, #06b6d4, #3b82f6);
-        }
-
-        header img {
-            width: 120px;
-            border-radius: 50%;
-            border: 3px solid white;
-        }
-
-        h1 {
-            margin: 10px 0;
-        }
-
-        section {
-            padding: 20px;
-        }
-
-        .card {
-            background: #1e293b;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 10px;
-            transition: transform 0.3s;
-        }
-
-        .card:hover {
-            transform: scale(1.05);
-        }
-
-        h2 {
-            color: #38bdf8;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        li {
-            padding: 5px 0;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 10px 15px;
-            background: #22c55e;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 15px;
-            background: #020617;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rohan Badnale | Portfolio</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-    <<img src="profile.jpg" width="150">" 
-    <h1>Rohan Badnale</h1>
-    <p>Student | Web Developer 🚀</p>
-</header>
+<!-- NAVBAR -->
 
-<section>
+<nav>
+    <h2>Rohan</h2>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+    <div class="hero-text">
+        <h1>Hi, I'm <span>Rohan Badnale</span></h1>
+        <p>Aspiring Web Developer</p>
+        <button>Download Resume</button>
+    </div>
+
+```
+<img src="profile.jpg" class="profile">
+```
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about" class="section">
     <h2>About Me</h2>
-    <div class="card">
-        <p>I am a BCA student passionate about coding and building websites.</p>
-    </div>
+    <p>
+        I am Rohan Badnale, a passionate student learning web development.
+        I enjoy building websites and improving my coding skills every day.
+    </p>
 </section>
 
-<section>
+<!-- SKILLS -->
+
+<section id="skills" class="section">
     <h2>Skills</h2>
-    <div class="card">
-        <ul>
-            <li>HTML & CSS</li>
-            <li>C Programming</li>
-            <li>Java (Basics)</li>
-            <li>GitHub</li>
-        </ul>
-    </div>
+
+```
+<div class="skill">
+    <p>HTML</p>
+    <div class="bar"><div style="width:90%"></div></div>
+</div>
+
+<div class="skill">
+    <p>CSS</p>
+    <div class="bar"><div style="width:80%"></div></div>
+</div>
+
+<div class="skill">
+    <p>JavaScript</p>
+    <div class="bar"><div style="width:70%"></div></div>
+</div>
+```
+
 </section>
 
-<section>
+<!-- PROJECTS -->
+
+<section id="projects" class="section">
     <h2>Projects</h2>
-    <div class="card">
-        <p>✔ Personal Portfolio Website</p>
-        <p>✔ Calculator using C</p>
-    </div>
+
+```
+<div class="card">Food Ordering Website</div>
+<div class="card">College Management System</div>
+```
+
 </section>
 
-<section>
-    <h2>Resume</h2>
-    <div class="card">
-        <a href="resume.pdf" class="btn" download>Download Resume 📄</a>
-    </div>
-</section>
+<!-- CONTACT -->
 
-<section>
+<section id="contact" class="section">
     <h2>Contact</h2>
-    <div class="card">
-        <p>Email: <a href="mailto:rohanbadnale9@gmail.com" style="color:cyan;">rohanbadnale9@gmail.com</a></p>
-    </div>
+    <p>Email: rohanbadnale9@gmail.com</p>
+    <p>Phone: 9356837429</p>
 </section>
-
-<footer>
-    <p>© 2026 Rohan Badnale</p>
-</footer>
 
 </body>
 </html>
