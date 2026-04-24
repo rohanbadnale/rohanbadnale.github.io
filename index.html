@@ -127,30 +127,48 @@
 <section id="projects" class="section">
     <h2 data-aos="fade-up">Projects</h2>
 
-```
-<div class="project-container">
+    <div class="project-container">
 
-    <div class="card" data-aos="zoom-in">
-        <img src="project1.jpg" class="project-img">
-        <h3>Food Ordering Website</h3>
-        <p>Online food ordering web app.</p>
-        <a href="https://github.com/rohanbadnale" target="_blank">
-            <button>GitHub</button>
-        </a>
+        <!-- Project 1 -->
+        <div class="card" data-aos="zoom-in">
+            <img src="project1.jpg" class="project-img">
+
+            <h3>Food Ordering Website</h3>
+            <p>Online food ordering web app with user-friendly interface.</p>
+
+            <div class="btn-group">
+                <a href="https://github.com/rohanbadnale" target="_blank">
+                    <button class="btn">GitHub</button>
+                </a>
+
+                <button class="btn demo" onclick="showDemo('food')">
+                    Live Demo
+                </button>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="card" data-aos="zoom-in">
+            <img src="project2.jpg" class="project-img">
+
+            <h3>College Management System</h3>
+            <p>Manage student data with simple dashboard UI.</p>
+
+            <div class="btn-group">
+                <a href="https://github.com/rohanbadnale" target="_blank">
+                    <button class="btn">GitHub</button>
+                </a>
+
+                <button class="btn demo" onclick="showDemo('college')">
+                    Live Demo
+                </button>
+            </div>
+        </div>
+
     </div>
 
-    <div class="card" data-aos="zoom-in">
-        <img src="project2.jpg" class="project-img">
-        <h3>College Management System</h3>
-        <p>Manage student data efficiently.</p>
-        <a href="https://github.com/rohanbadnale" target="_blank">
-            <button>GitHub</button>
-        </a>
-    </div>
-
-</div>
-```
-
+    <!-- Demo Output Box -->
+    <div id="demo-box" class="demo-box"></div>
 </section>
 
 <!-- FEEDBACK -->
