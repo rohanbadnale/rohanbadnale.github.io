@@ -14,12 +14,12 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: #f5f5f5;
+    background: #f4f6f8;
     color: #333;
 }
 
 section {
-    padding: 60px 80px;
+    padding: 70px 80px;
 }
 
 h1, h2, h3 {
@@ -35,29 +35,32 @@ h1, h2, h3 {
 }
 
 .hero-text h1 {
-    font-size: 48px;
+    font-size: 50px;
 }
 
 .hero-text span {
     color: #00adb5;
 }
 
-.hero-text p {
-    margin: 10px 0;
+.btn {
+    background: #00adb5;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
 }
 
 .hero img {
-    width: 280px;
+    width: 260px;
     border-radius: 20px;
 }
 
-.btn {
-    background: #00adb5;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
+/* STATS */
+.stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
 }
 
 /* CARDS */
@@ -65,7 +68,7 @@ h1, h2, h3 {
     background: #fff;
     padding: 20px;
     border-radius: 12px;
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 /* GRID */
@@ -79,32 +82,22 @@ h1, h2, h3 {
     flex: 1;
 }
 
-/* EDUCATION */
-.education .card {
-    border-left: 5px solid #00adb5;
-}
-
 /* SKILLS */
-.skill {
-    margin: 10px 0;
-}
-
 .bar {
     background: #ddd;
-    border-radius: 10px;
     height: 8px;
+    border-radius: 10px;
 }
 
 .bar div {
     background: #00adb5;
     height: 8px;
-    border-radius: 10px;
 }
 
-/* PROJECTS */
-.project a {
-    color: #00adb5;
-    text-decoration: none;
+/* SERVICES */
+.services {
+    display: flex;
+    gap: 20px;
 }
 
 /* TESTIMONIAL */
@@ -142,13 +135,13 @@ footer {
     color: #fff;
 }
 
-/* RESPONSIVE */
+/* MOBILE */
 @media(max-width:768px) {
     .hero {
         flex-direction: column;
         text-align: center;
     }
-    .testimonials {
+    .services, .testimonials {
         flex-direction: column;
     }
 }
@@ -164,12 +157,16 @@ footer {
         <h1>Hi, I'm <span>Rohan Badnale</span></h1>
         <p>Aspiring Web Developer & Cloud Enthusiast</p>
 
-        <a href="resume.pdf" download>
-            <button class="btn">Download Resume</button>
-        </a>
+        <button class="btn">Download Resume</button>
+
+        <div class="stats">
+            <div><h2>2+</h2><p>Years Experience</p></div>
+            <div><h2>5+</h2><p>Projects</p></div>
+            <div><h2>10+</h2><p>Skills Learned</p></div>
+        </div>
     </div>
 
-    <img src="profile.jpg" alt="profile">
+    <img src="profile.jpg">
 </section>
 
 <!-- ABOUT -->
@@ -178,37 +175,51 @@ footer {
 
     <div class="card">
         <p>
-            I am a BCA student at Swami Vivekananda Mahavidyalaya, Udgir.
-            Passionate about web development, cloud computing, and DevOps.
+            I am a passionate BCA student focused on building modern web applications 
+            and learning cloud and DevOps technologies. I enjoy solving real-world problems 
+            through code.
         </p>
 
         <p>
-            I have 2 years of experience as a Data Operator at ACPL.
-            I enjoy building projects and learning new technologies.
+            With experience as a Data Operator, I developed strong attention to detail 
+            and discipline, which helps me in my technical journey.
         </p>
     </div>
 </section>
 
 <!-- EDUCATION -->
-<section class="education">
+<section>
     <h2>Education</h2>
 
     <div class="card">
         <h3>BCA</h3>
         <p>Swami Vivekananda Mahavidyalaya</p>
-        <p>2023 - 2025 (Pursuing)</p>
+        <p>2023 - 2025</p>
     </div>
 
     <div class="card">
         <h3>HSC</h3>
         <p>Shri Hawgirswami Mahavidyalaya</p>
-        <p>2022 | 57.50%</p>
     </div>
 
     <div class="card">
         <h3>SSC</h3>
         <p>Vidya Vardhini High School</p>
-        <p>2020 | 67.20%</p>
+    </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section>
+    <h2>Experience</h2>
+
+    <div class="card">
+        <h3>Data Operator</h3>
+        <p>ACPL (2021–2023)</p>
+    </div>
+
+    <div class="card">
+        <h3>Freelance Practice</h3>
+        <p>Web projects & UI designs</p>
     </div>
 </section>
 
@@ -225,9 +236,24 @@ footer {
 
         <p>JavaScript</p>
         <div class="bar"><div style="width:75%"></div></div>
+    </div>
+</section>
 
-        <p>Python</p>
-        <div class="bar"><div style="width:70%"></div></div>
+<!-- SERVICES -->
+<section class="services">
+    <div class="card">
+        <h3>Web Development</h3>
+        <p>Responsive website creation</p>
+    </div>
+
+    <div class="card">
+        <h3>Cloud Basics</h3>
+        <p>AWS learning</p>
+    </div>
+
+    <div class="card">
+        <h3>DevOps</h3>
+        <p>Docker basics</p>
     </div>
 </section>
 
@@ -236,41 +262,51 @@ footer {
     <h2>Projects</h2>
 
     <div class="grid">
-
-        <div class="card project">
-            <h3>Food Ordering Website</h3>
-            <p>Online food ordering system with user-friendly UI</p>
-            <a href="https://github.com/rohanbadnale" target="_blank">GitHub</a>
+        <div class="card">
+            <h3>Food Website</h3>
+            <p>Online ordering UI</p>
         </div>
 
-        <div class="card project">
-            <h3>College Management System</h3>
-            <p>Manage student data and records</p>
-            <a href="https://github.com/rohanbadnale" target="_blank">GitHub</a>
+        <div class="card">
+            <h3>College System</h3>
+            <p>Student management</p>
         </div>
-
     </div>
 </section>
 
-<!-- FEEDBACK -->
+<!-- ACHIEVEMENTS -->
+<section>
+    <h2>Achievements</h2>
+
+    <div class="card">
+        <p>✔ Completed multiple mini web projects</p>
+        <p>✔ Learning AWS & DevOps tools</p>
+        <p>✔ Strong consistency in skill improvement</p>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
 <section>
     <h2>Testimonials</h2>
 
     <div class="testimonials">
         <div class="testimonial">
-            "Rohan is hardworking and dedicated."
+            "Very hardworking and consistent learner."
         </div>
 
         <div class="testimonial">
-            "Quick learner with strong technical interest."
+            "Strong interest in modern technologies."
         </div>
     </div>
+</section>
 
-    <h2 style="margin-top:40px;">Send Feedback</h2>
+<!-- FEEDBACK -->
+<section>
+    <h2>Send Feedback</h2>
 
     <form>
-        <input type="text" placeholder="Name" required>
-        <input type="email" placeholder="Email" required>
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
         <textarea placeholder="Message"></textarea>
         <button class="btn">Send</button>
     </form>
@@ -281,8 +317,7 @@ footer {
     <h2>Contact</h2>
 
     <p>Email: rohanbadnale9@gmail.com</p>
-    <p>Phone: +91 9356837429</p>
-    <p>Location: Udgir, Maharashtra</p>
+    <p>Phone: 9356837429</p>
 </section>
 
 <footer>
