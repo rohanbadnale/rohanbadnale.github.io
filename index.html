@@ -9,110 +9,153 @@
 
 <style>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    background: #0b1220;
-    color: white;
+body{
+    font-family:'Poppins',sans-serif;
+    background:#0b1220;
+    color:white;
 }
 
 /* NAV */
-nav {
-    position: fixed;
-    width: 100%;
-    background: rgba(0,0,0,0.4);
-    backdrop-filter: blur(10px);
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 40px;
-    z-index: 999;
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    background:rgba(0,0,0,0.4);
+    backdrop-filter:blur(10px);
+    display:flex;
+    justify-content:space-between;
+    padding:15px 40px;
+    z-index:999;
 }
 
-nav a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
+nav a{
+    color:white;
+    margin:0 10px;
+    text-decoration:none;
 }
 
 /* HERO */
-.hero {
-    height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 100px;
-    background: linear-gradient(120deg,#3a86ff,#8338ec,#ff006e,#00adb5);
-    background-size: 300% 300%;
-    animation: move 10s infinite;
+.hero{
+    height:100vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:100px;
+    background:linear-gradient(120deg,#3a86ff,#8338ec,#ff006e,#00adb5);
+    background-size:300% 300%;
+    animation:move 10s infinite;
 }
 
-@keyframes move {
+@keyframes move{
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
 }
 
-.hero h1 {
-    font-size: 55px;
+.hero h1{
+    font-size:55px;
 }
 
-.hero span {
-    color: yellow;
+.hero span{
+    color:yellow;
 }
 
-.btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 12px 18px;
-    background: yellow;
-    color: black;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: bold;
+.btn{
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 18px;
+    background:yellow;
+    color:black;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:bold;
+    cursor:pointer;
 }
 
 /* SECTIONS */
-section {
-    padding: 80px;
+section{
+    padding:80px;
 }
 
-.title {
-    font-size: 30px;
-    margin-bottom: 20px;
-    color: #00adb5;
+.title{
+    font-size:30px;
+    margin-bottom:20px;
+    color:#00adb5;
 }
 
-.card {
-    background: rgba(255,255,255,0.08);
-    padding: 20px;
-    border-radius: 15px;
-    margin: 10px 0;
+.card{
+    background:rgba(255,255,255,0.08);
+    padding:20px;
+    border-radius:15px;
+    margin:10px 0;
 }
 
 /* GRID */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    gap: 15px;
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+}
+
+/* SKILLS */
+.skill p{
+    margin:10px 0 5px;
+}
+
+.bar{
+    background:rgba(255,255,255,0.1);
+    height:10px;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.bar div{
+    height:100%;
+    background:linear-gradient(90deg,#00adb5,#ffdd00);
+}
+
+/* TAGS */
+.tags span{
+    display:inline-block;
+    padding:6px 12px;
+    margin:5px;
+    border-radius:20px;
+    background:rgba(255,255,255,0.1);
+    border:1px solid rgba(255,255,255,0.2);
+    font-size:12px;
+}
+
+/* INPUT */
+input,textarea{
+    width:100%;
+    padding:10px;
+    margin-top:10px;
+    border:none;
+    border-radius:8px;
 }
 
 /* FOOTER */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #020617;
+footer{
+    text-align:center;
+    padding:20px;
+    background:#020617;
 }
 
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
+/* MOBILE */
+@media(max-width:768px){
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        padding:50px;
+    }
 }
 
 </style>
@@ -142,15 +185,15 @@ input, textarea {
         <a class="btn" href="resume.pdf" download>Download Resume</a>
     </div>
 
-    <img src="profile.jpg" width="260" style="border-radius:50%; border:5px solid white;">
+    <img src="profile.jpg" width="260" style="border-radius:50%;border:5px solid white;">
 </section>
 
 <!-- ABOUT -->
 <section id="about">
     <div class="title">About Me</div>
     <div class="card">
-        My name is Rohan Badnale. I am currently pursuing BCA in Computer Applications at Swami Vivekananda College with CGPA 8.26.  
-        I have strong interest in software development and DSA. I enjoy building real-world applications.
+        My name is Rohan Badnale. I am pursuing BCA in Computer Applications at Swami Vivekananda College with CGPA 8.26.
+        I have strong interest in software development and DSA.
     </div>
 </section>
 
@@ -180,10 +223,31 @@ input, textarea {
     <div class="title">Skills</div>
 
     <div class="card">
-        C, C++, Java, Python <br>
-        Advanced Java, JavaScript <br>
-        React, Express, MongoDB <br>
-        SQL Database
+
+        <div class="skill">
+            <p>HTML</p>
+            <div class="bar"><div style="width:90%"></div></div>
+        </div>
+
+        <div class="skill">
+            <p>CSS</p>
+            <div class="bar"><div style="width:85%"></div></div>
+        </div>
+
+        <div class="skill">
+            <p>JavaScript</p>
+            <div class="bar"><div style="width:80%"></div></div>
+        </div>
+
+        <p style="margin-top:10px;">Languages:</p>
+        <div class="tags">
+            <span>C</span>
+            <span>C++</span>
+            <span>Java</span>
+            <span>Python</span>
+            <span>SQL</span>
+        </div>
+
     </div>
 </section>
 
@@ -193,9 +257,9 @@ input, textarea {
 
     <div class="grid">
         <div class="card">Employee Management</div>
-        <div class="card">Library Management</div>
-        <div class="card">Hostel Management</div>
-        <div class="card">Student Attendance</div>
+        <div class="card">Library System</div>
+        <div class="card">Hostel System</div>
+        <div class="card">Attendance System</div>
         <div class="card">Banking System</div>
         <div class="card">Blog Platform</div>
         <div class="card">E-Commerce Website</div>
@@ -214,8 +278,8 @@ input, textarea {
 <section>
     <div class="title">Strength & Weakness</div>
     <div class="card">
-        <b>Strength:</b> Logical thinking and quick learning<br><br>
-        <b>Weakness:</b> Less real-world exposure (improving via projects)
+        <b>Strength:</b> Logical thinking, fast learning<br><br>
+        <b>Weakness:</b> Less real-world experience (improving through practice)
     </div>
 </section>
 
@@ -235,6 +299,7 @@ input, textarea {
 <!-- CONTACT -->
 <section id="contact">
     <div class="title">Contact</div>
+
     <div class="card">
         Email: rohanbadnale9@gmail.com <br>
         Phone: 9356837429
@@ -249,21 +314,26 @@ input, textarea {
 
 function save(){
     let data = {
-        name: name.value,
-        email: email.value,
-        msg: msg.value
+        name:name.value,
+        email:email.value,
+        msg:msg.value
     };
 
     let old = JSON.parse(localStorage.getItem("fb")) || [];
     old.push(data);
 
     localStorage.setItem("fb", JSON.stringify(old));
+
+    name.value="";
+    email.value="";
+    msg.value="";
+
     show();
 }
 
 function show(){
     let old = JSON.parse(localStorage.getItem("fb")) || [];
-    list.innerHTML = "";
+    list.innerHTML="";
 
     old.forEach(f=>{
         list.innerHTML += `
