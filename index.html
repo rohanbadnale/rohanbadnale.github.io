@@ -18,12 +18,12 @@ body {
     color: #333;
 }
 
-h1, h2, h3 {
-    margin: 0;
-}
-
 section {
     padding: 60px 80px;
+}
+
+h1, h2, h3 {
+    margin-bottom: 10px;
 }
 
 /* HERO */
@@ -43,21 +43,7 @@ section {
 }
 
 .hero-text p {
-    margin: 15px 0;
-}
-
-.hero-text .email {
-    color: #ff5722;
-}
-
-.stats {
-    display: flex;
-    gap: 40px;
-    margin-top: 20px;
-}
-
-.stats h2 {
-    font-size: 28px;
+    margin: 10px 0;
 }
 
 .hero img {
@@ -65,51 +51,87 @@ section {
     border-radius: 20px;
 }
 
-/* SERVICES */
-.services {
-    display: flex;
-    gap: 20px;
+.btn {
+    background: #00adb5;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
+/* CARDS */
 .card {
-    flex: 1;
     background: #fff;
     padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
-
-/* ABOUT */
-.about {
-    background: #fff;
-}
-
-.big-stats {
-    display: flex;
-    gap: 40px;
+    border-radius: 12px;
     margin-top: 20px;
 }
 
-.big-stats h2 {
-    font-size: 32px;
+/* GRID */
+.grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.grid .card {
+    flex: 1;
+}
+
+/* EDUCATION */
+.education .card {
+    border-left: 5px solid #00adb5;
+}
+
+/* SKILLS */
+.skill {
+    margin: 10px 0;
+}
+
+.bar {
+    background: #ddd;
+    border-radius: 10px;
+    height: 8px;
+}
+
+.bar div {
+    background: #00adb5;
+    height: 8px;
+    border-radius: 10px;
 }
 
 /* PROJECTS */
-.projects {
+.project a {
+    color: #00adb5;
+    text-decoration: none;
+}
+
+/* TESTIMONIAL */
+.testimonials {
     display: flex;
     gap: 20px;
 }
 
-.project {
-    background: #fff;
-    padding: 20px;
-    border-radius: 15px;
+.testimonial {
     flex: 1;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    font-style: italic;
 }
 
-/* CONTACT */
-.contact {
-    background: #fff;
+/* FORM */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
 }
 
 /* FOOTER */
@@ -121,18 +143,13 @@ footer {
 }
 
 /* RESPONSIVE */
-@media(max-width: 768px) {
+@media(max-width:768px) {
     .hero {
         flex-direction: column;
         text-align: center;
     }
-
-    .services, .projects {
+    .testimonials {
         flex-direction: column;
-    }
-
-    section {
-        padding: 40px 20px;
     }
 }
 
@@ -143,110 +160,133 @@ footer {
 
 <!-- HERO -->
 <section class="hero">
-
     <div class="hero-text">
-        <h1>Hey There,<br>I'm <span>Rohan</span></h1>
-
+        <h1>Hi, I'm <span>Rohan Badnale</span></h1>
         <p>Aspiring Web Developer & Cloud Enthusiast</p>
 
-        <p class="email">rohanbadnale9@gmail.com</p>
-
-        <div class="stats">
-            <div>
-                <h2>2+</h2>
-                <p>Experience</p>
-            </div>
-            <div>
-                <h2>5+</h2>
-                <p>Projects</p>
-            </div>
-        </div>
+        <a href="resume.pdf" download>
+            <button class="btn">Download Resume</button>
+        </a>
     </div>
 
     <img src="profile.jpg" alt="profile">
-
-</section>
-
-<!-- SERVICES -->
-<section class="services">
-
-    <div class="card">
-        <h3>Web Development</h3>
-        <p>Building responsive websites using HTML, CSS, JavaScript</p>
-    </div>
-
-    <div class="card">
-        <h3>Cloud Basics</h3>
-        <p>Learning AWS and cloud deployment fundamentals</p>
-    </div>
-
-    <div class="card">
-        <h3>DevOps</h3>
-        <p>Exploring Docker and automation tools</p>
-    </div>
-
 </section>
 
 <!-- ABOUT -->
-<section class="about">
+<section>
+    <h2>About Me</h2>
 
-    <h2>What do I help?</h2>
+    <div class="card">
+        <p>
+            I am a BCA student at Swami Vivekananda Mahavidyalaya, Udgir.
+            Passionate about web development, cloud computing, and DevOps.
+        </p>
 
-    <p>
-        I am a BCA student at Swami Vivekananda Mahavidyalaya, Udgir.
-        I enjoy building modern websites and learning cloud & DevOps technologies.
-    </p>
+        <p>
+            I have 2 years of experience as a Data Operator at ACPL.
+            I enjoy building projects and learning new technologies.
+        </p>
+    </div>
+</section>
 
-    <p>
-        I have 2 years of experience as a Data Operator at ACPL,
-        where I developed strong problem-solving and data handling skills.
-    </p>
+<!-- EDUCATION -->
+<section class="education">
+    <h2>Education</h2>
 
-    <div class="big-stats">
-        <div>
-            <h2>10+</h2>
-            <p>Mini Projects</p>
-        </div>
-
-        <div>
-            <h2>100%</h2>
-            <p>Learning Focus</p>
-        </div>
+    <div class="card">
+        <h3>BCA</h3>
+        <p>Swami Vivekananda Mahavidyalaya</p>
+        <p>2023 - 2025 (Pursuing)</p>
     </div>
 
+    <div class="card">
+        <h3>HSC</h3>
+        <p>Shri Hawgirswami Mahavidyalaya</p>
+        <p>2022 | 57.50%</p>
+    </div>
+
+    <div class="card">
+        <h3>SSC</h3>
+        <p>Vidya Vardhini High School</p>
+        <p>2020 | 67.20%</p>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section>
+    <h2>Skills</h2>
+
+    <div class="card">
+        <p>HTML</p>
+        <div class="bar"><div style="width:90%"></div></div>
+
+        <p>CSS</p>
+        <div class="bar"><div style="width:85%"></div></div>
+
+        <p>JavaScript</p>
+        <div class="bar"><div style="width:75%"></div></div>
+
+        <p>Python</p>
+        <div class="bar"><div style="width:70%"></div></div>
+    </div>
 </section>
 
 <!-- PROJECTS -->
-<section class="projects">
+<section>
+    <h2>Projects</h2>
 
-    <div class="project">
-        <h3>Food Ordering Website</h3>
-        <p>Online food ordering system with user-friendly UI</p>
-        <a href="https://github.com/rohanbadnale" target="_blank">GitHub</a>
+    <div class="grid">
+
+        <div class="card project">
+            <h3>Food Ordering Website</h3>
+            <p>Online food ordering system with user-friendly UI</p>
+            <a href="https://github.com/rohanbadnale" target="_blank">GitHub</a>
+        </div>
+
+        <div class="card project">
+            <h3>College Management System</h3>
+            <p>Manage student data and records</p>
+            <a href="https://github.com/rohanbadnale" target="_blank">GitHub</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- FEEDBACK -->
+<section>
+    <h2>Testimonials</h2>
+
+    <div class="testimonials">
+        <div class="testimonial">
+            "Rohan is hardworking and dedicated."
+        </div>
+
+        <div class="testimonial">
+            "Quick learner with strong technical interest."
+        </div>
     </div>
 
-    <div class="project">
-        <h3>College Management System</h3>
-        <p>System to manage student data and records</p>
-        <a href="https://github.com/rohanbadnale" target="_blank">GitHub</a>
-    </div>
+    <h2 style="margin-top:40px;">Send Feedback</h2>
 
+    <form>
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="Email" required>
+        <textarea placeholder="Message"></textarea>
+        <button class="btn">Send</button>
+    </form>
 </section>
 
 <!-- CONTACT -->
-<section class="contact">
-
+<section>
     <h2>Contact</h2>
 
-    <p><strong>Email:</strong> rohanbadnale9@gmail.com</p>
-    <p><strong>Phone:</strong> +91 9356837429</p>
-    <p><strong>Location:</strong> Udgir, Maharashtra, India</p>
-
+    <p>Email: rohanbadnale9@gmail.com</p>
+    <p>Phone: +91 9356837429</p>
+    <p>Location: Udgir, Maharashtra</p>
 </section>
 
-<!-- FOOTER -->
 <footer>
-    <p>© 2026 Rohan Badnale | All Rights Reserved</p>
+    <p>© 2026 Rohan Badnale</p>
 </footer>
 
 </body>
