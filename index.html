@@ -9,7 +9,6 @@
 
 <style>
 
-/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -19,21 +18,20 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: #0f172a;
+    background: #0b1220;
     color: white;
 }
 
-/* NAVBAR */
+/* NAV */
 nav {
     position: fixed;
     width: 100%;
-    top: 0;
-    background: rgba(255,255,255,0.05);
+    background: rgba(0,0,0,0.4);
     backdrop-filter: blur(10px);
     display: flex;
     justify-content: space-between;
     padding: 15px 40px;
-    z-index: 1000;
+    z-index: 999;
 }
 
 nav a {
@@ -46,18 +44,18 @@ nav a {
 .hero {
     height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 100px 80px;
-    background: linear-gradient(-45deg, #3a86ff, #8338ec, #00adb5, #ff006e);
-    background-size: 400% 400%;
-    animation: gradient 10s ease infinite;
+    align-items: center;
+    padding: 100px;
+    background: linear-gradient(120deg,#3a86ff,#8338ec,#ff006e,#00adb5);
+    background-size: 300% 300%;
+    animation: move 10s infinite;
 }
 
-@keyframes gradient {
-    0% {background-position:0% 50%;}
-    50% {background-position:100% 50%;}
-    100% {background-position:0% 50%;}
+@keyframes move {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
 }
 
 .hero h1 {
@@ -65,28 +63,18 @@ nav a {
 }
 
 .hero span {
-    color: #ffdd00;
-}
-
-.hero p {
-    margin-top: 10px;
-    opacity: 0.9;
+    color: yellow;
 }
 
 .btn {
-    margin-top: 20px;
     display: inline-block;
-    background: #ffdd00;
+    margin-top: 15px;
+    padding: 12px 18px;
+    background: yellow;
     color: black;
-    padding: 12px 20px;
     border-radius: 10px;
-    font-weight: bold;
     text-decoration: none;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    transform: scale(1.05);
+    font-weight: bold;
 }
 
 /* SECTIONS */
@@ -95,46 +83,23 @@ section {
 }
 
 .title {
-    font-size: 32px;
+    font-size: 30px;
     margin-bottom: 20px;
     color: #00adb5;
 }
 
-/* CARDS */
 .card {
     background: rgba(255,255,255,0.08);
     padding: 20px;
     border-radius: 15px;
-    backdrop-filter: blur(10px);
     margin: 10px 0;
 }
 
 /* GRID */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
     gap: 15px;
-}
-
-/* SKILLS BAR */
-.bar {
-    background: #1e293b;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.bar div {
-    height: 10px;
-    background: #00adb5;
-}
-
-/* CONTACT */
-input, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 8px;
-    border: none;
 }
 
 /* FOOTER */
@@ -142,6 +107,12 @@ footer {
     text-align: center;
     padding: 20px;
     background: #020617;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
 }
 
 </style>
@@ -155,6 +126,7 @@ footer {
     <div>
         <a href="#home">Home</a>
         <a href="#about">About</a>
+        <a href="#edu">Education</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
@@ -177,13 +149,29 @@ footer {
 <section id="about">
     <div class="title">About Me</div>
     <div class="card">
-        I am Rohan Badnale, currently pursuing BCA at Swami Vivekananda College with CGPA 8.26.
-        I have strong interest in software development, DSA, and full stack development.
+        My name is Rohan Badnale. I am currently pursuing BCA in Computer Applications at Swami Vivekananda College with CGPA 8.26.  
+        I have strong interest in software development and DSA. I enjoy building real-world applications.
+    </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="edu">
+    <div class="title">Education</div>
+
+    <div class="card">
+        <b>BCA</b><br>
+        Swami Vivekananda College<br>
+        CGPA: 8.26
     </div>
 
     <div class="card">
-        10th: Vidya Vardhini High School, Udgir <br>
-        12th: Shri Hawgirswami College
+        <b>12th</b><br>
+        Shri Hawgirswami College
+    </div>
+
+    <div class="card">
+        <b>10th</b><br>
+        Vidya Vardhini High School, Udgir
     </div>
 </section>
 
@@ -192,34 +180,42 @@ footer {
     <div class="title">Skills</div>
 
     <div class="card">
-        HTML <div class="bar"><div style="width:90%"></div></div><br>
-        CSS <div class="bar"><div style="width:85%"></div></div><br>
-        JavaScript <div class="bar"><div style="width:80%"></div></div><br>
-        C / C++ / Java / Python / SQL
+        C, C++, Java, Python <br>
+        Advanced Java, JavaScript <br>
+        React, Express, MongoDB <br>
+        SQL Database
     </div>
 </section>
 
 <!-- PROJECTS -->
 <section id="projects">
-    <div class="title">Projects</div>
+    <div class="title">Projects (15)</div>
 
     <div class="grid">
         <div class="card">Employee Management</div>
-        <div class="card">Library System</div>
+        <div class="card">Library Management</div>
+        <div class="card">Hostel Management</div>
+        <div class="card">Student Attendance</div>
         <div class="card">Banking System</div>
-        <div class="card">Chat Application</div>
+        <div class="card">Blog Platform</div>
         <div class="card">E-Commerce Website</div>
+        <div class="card">Appointment Booking</div>
+        <div class="card">Event Portal</div>
+        <div class="card">Notice Board App</div>
+        <div class="card">Social Media Clone</div>
+        <div class="card">Chat App</div>
+        <div class="card">File Sharing System</div>
         <div class="card">Online Exam System</div>
+        <div class="card">Live Notification System</div>
     </div>
 </section>
 
 <!-- STRENGTH -->
 <section>
     <div class="title">Strength & Weakness</div>
-
     <div class="card">
-        <b>Strength:</b> Logical thinking, fast learning<br><br>
-        <b>Weakness:</b> Less real-world experience (improving through practice)
+        <b>Strength:</b> Logical thinking and quick learning<br><br>
+        <b>Weakness:</b> Less real-world exposure (improving via projects)
     </div>
 </section>
 
@@ -230,6 +226,7 @@ footer {
     <input id="name" placeholder="Name">
     <input id="email" placeholder="Email">
     <textarea id="msg" placeholder="Message"></textarea>
+
     <button class="btn" onclick="save()">Send</button>
 
     <div id="list"></div>
@@ -238,7 +235,6 @@ footer {
 <!-- CONTACT -->
 <section id="contact">
     <div class="title">Contact</div>
-
     <div class="card">
         Email: rohanbadnale9@gmail.com <br>
         Phone: 9356837429
@@ -250,6 +246,7 @@ footer {
 </footer>
 
 <script>
+
 function save(){
     let data = {
         name: name.value,
@@ -279,6 +276,7 @@ function show(){
 }
 
 show();
+
 </script>
 
 </body>
