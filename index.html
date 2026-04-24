@@ -91,6 +91,7 @@ section{
     color:#00adb5;
 }
 
+/* CARD */
 .card{
     background:rgba(255,255,255,0.08);
     padding:20px;
@@ -106,8 +107,8 @@ section{
 }
 
 /* SKILLS */
-.skill p{
-    margin:10px 0 5px;
+.skill{
+    margin:15px 0;
 }
 
 .bar{
@@ -129,7 +130,6 @@ section{
     margin:5px;
     border-radius:20px;
     background:rgba(255,255,255,0.1);
-    border:1px solid rgba(255,255,255,0.2);
     font-size:12px;
 }
 
@@ -147,15 +147,6 @@ footer{
     text-align:center;
     padding:20px;
     background:#020617;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-    .hero{
-        flex-direction:column;
-        text-align:center;
-        padding:50px;
-    }
 }
 
 </style>
@@ -192,8 +183,8 @@ footer{
 <section id="about">
     <div class="title">About Me</div>
     <div class="card">
-        My name is Rohan Badnale. I am pursuing BCA in Computer Applications at Swami Vivekananda College with CGPA 8.26.
-        I have strong interest in software development and DSA.
+        My name is Rohan Badnale. I am pursuing BCA at Swami Vivekananda College with CGPA 8.26.
+        I am interested in Software Development and DSA.
     </div>
 </section>
 
@@ -239,7 +230,7 @@ footer{
             <div class="bar"><div style="width:80%"></div></div>
         </div>
 
-        <p style="margin-top:10px;">Languages:</p>
+        <p style="margin-top:10px;">Languages</p>
         <div class="tags">
             <span>C</span>
             <span>C++</span>
@@ -277,9 +268,10 @@ footer{
 <!-- STRENGTH -->
 <section>
     <div class="title">Strength & Weakness</div>
+
     <div class="card">
-        <b>Strength:</b> Logical thinking, fast learning<br><br>
-        <b>Weakness:</b> Less real-world experience (improving through practice)
+        <b>Strength:</b> Logical thinking, quick learning<br><br>
+        <b>Weakness:</b> Less real-world experience (improving)
     </div>
 </section>
 
@@ -292,6 +284,7 @@ footer{
     <textarea id="msg" placeholder="Message"></textarea>
 
     <button class="btn" onclick="save()">Send</button>
+    <button class="btn" style="background:red;" onclick="clearAll()">Clear All</button>
 
     <div id="list"></div>
 </section>
@@ -313,16 +306,16 @@ footer{
 <script>
 
 function save(){
-    let data = {
+    let data={
         name:name.value,
         email:email.value,
         msg:msg.value
     };
 
-    let old = JSON.parse(localStorage.getItem("fb")) || [];
+    let old=JSON.parse(localStorage.getItem("fb"))||[];
     old.push(data);
 
-    localStorage.setItem("fb", JSON.stringify(old));
+    localStorage.setItem("fb",JSON.stringify(old));
 
     name.value="";
     email.value="";
@@ -332,17 +325,33 @@ function save(){
 }
 
 function show(){
-    let old = JSON.parse(localStorage.getItem("fb")) || [];
+    let old=JSON.parse(localStorage.getItem("fb"))||[];
     list.innerHTML="";
 
-    old.forEach(f=>{
-        list.innerHTML += `
+    old.forEach((f,i)=>{
+        list.innerHTML+=`
         <div class="card">
             <b>${f.name}</b><br>
             ${f.email}<br>
-            ${f.msg}
+            ${f.msg}<br><br>
+
+            <button class="btn" style="background:red;" onclick="del(${i})">
+                Delete
+            </button>
         </div>`;
     });
+}
+
+function del(i){
+    let old=JSON.parse(localStorage.getItem("fb"))||[];
+    old.splice(i,1);
+    localStorage.setItem("fb",JSON.stringify(old));
+    show();
+}
+
+function clearAll(){
+    localStorage.removeItem("fb");
+    show();
 }
 
 show();
