@@ -20,13 +20,6 @@
 body{
     background:#0f172a;
     color:white;
-    transition:0.3s;
-}
-
-/* LIGHT MODE */
-body.light{
-    background:#f5f5f5;
-    color:black;
 }
 
 /* NAV */
@@ -40,10 +33,6 @@ nav{
     top:0;
 }
 
-body.light nav{
-    background:white;
-}
-
 nav h2{
     color:#38bdf8;
 }
@@ -55,17 +44,8 @@ nav ul{
 }
 
 nav ul li a{
-    color:inherit;
+    color:white;
     text-decoration:none;
-}
-
-button{
-    background:#38bdf8;
-    border:none;
-    padding:10px 15px;
-    cursor:pointer;
-    border-radius:8px;
-    font-weight:bold;
 }
 
 /* HERO */
@@ -82,6 +62,15 @@ button{
 
 .hero span{
     color:#38bdf8;
+}
+
+button{
+    background:#38bdf8;
+    border:none;
+    padding:10px 15px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
 }
 
 .profile{
@@ -108,10 +97,6 @@ h2{
     border-radius:12px;
 }
 
-body.light .card{
-    background:white;
-}
-
 /* PROJECT */
 .project-container{
     display:flex;
@@ -122,19 +107,6 @@ body.light .card{
 .project-img{
     width:100%;
     border-radius:10px;
-}
-
-/* SKILLS */
-.bar{
-    background:#334155;
-    height:10px;
-    border-radius:5px;
-    margin-bottom:10px;
-}
-
-.bar div{
-    height:10px;
-    background:#38bdf8;
 }
 
 /* FORM */
@@ -178,129 +150,105 @@ input,textarea{
     <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#education">Education</a></li>
-        <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#feedback">Feedback</a></li>
+        <li><a href="#contact">Contact</a></li>
     </ul>
-
-    <button onclick="toggleMode()">🌙</button>
 </nav>
 
 <!-- HERO -->
-<section class="hero">
-    <div data-aos="fade-right">
-        <h1>Hi, I'm <span class="typing"></span></h1>
+<section class="hero" data-aos="fade-up">
+
+    <div>
+        <h1>Hi, I'm <span>Rohan Badnale</span></h1>
         <p>Web Developer & Cloud Enthusiast</p>
-        <button>Download Resume</button>
+
+        <!-- FIXED RESUME DOWNLOAD -->
+        <a href="resume.pdf" download>
+            <button>Download Resume</button>
+        </a>
     </div>
 
-    <img src="profile.jpg" class="profile" data-aos="fade-left">
+    <img src="profile.jpg" class="profile">
 </section>
 
 <!-- ABOUT -->
-<section class="section" id="about">
-    <h2>About</h2>
+<section class="section" id="about" data-aos="fade-up">
+    <h2>About Me</h2>
+
     <div class="card">
-        I am a BCA student passionate about Web Development, Cloud & DevOps.
+        <p>
+            Hello! I am <b>Rohan Badnale</b>, a passionate BCA student currently studying at 
+            Swami Vivekananda Mahavidyalaya, Udgir. I am interested in Web Development, Cloud Computing, and DevOps.
+        </p>
     </div>
 </section>
 
 <!-- EDUCATION -->
-<section class="section" id="education">
-    <h2>Education</h2>
+<section class="section" id="education" data-aos="fade-up">
+    <h2>Education Details</h2>
 
-    <div class="card">BCA - Pursuing</div>
-    <div class="card">HSC - 57%</div>
-    <div class="card">SSC - 67%</div>
-</section>
+    <div class="card">
+        <h3>BCA (Bachelor of Computer Applications)</h3>
+        <p>Swami Vivekananda Mahavidyalaya, Udgir</p>
+        <p>2025 (Pursuing)</p>
+    </div>
 
-<!-- SKILLS -->
-<section class="section" id="skills">
-    <h2>Skills</h2>
+    <div class="card">
+        <h3>HSC (Higher Secondary)</h3>
+        <p>Shri Hawgirswami Mahavidyalaya, Udgir</p>
+        <p>2022 | 57.50%</p>
+    </div>
 
-    <p>HTML</p>
-    <div class="bar"><div style="width:90%"></div></div>
-
-    <p>CSS</p>
-    <div class="bar"><div style="width:85%"></div></div>
-
-    <p>JavaScript</p>
-    <div class="bar"><div style="width:75%"></div></div>
+    <div class="card">
+        <h3>SSC (School)</h3>
+        <p>Vidya Vardhini High School</p>
+        <p>2020 | 67.20%</p>
+    </div>
 </section>
 
 <!-- PROJECTS -->
-<section class="section" id="projects">
+<section class="section" id="projects" data-aos="fade-up">
     <h2>Projects</h2>
 
     <div class="project-container">
 
         <div class="card">
             <img src="project1.jpg" class="project-img">
-            <h3>Food Ordering App</h3>
+            <h3>Food Ordering Website</h3>
         </div>
 
         <div class="card">
             <img src="project2.jpg" class="project-img">
-            <h3>College System</h3>
+            <h3>College Management System</h3>
         </div>
 
     </div>
 </section>
 
 <!-- FEEDBACK -->
-<section class="section" id="feedback">
+<section class="section" id="feedback" data-aos="fade-up">
     <h2>Feedback</h2>
 
-    <form id="feedbackForm">
-        <input type="text" id="name" placeholder="Name" required>
-        <input type="email" id="email" placeholder="Email" required>
-        <textarea id="message" placeholder="Message" required></textarea>
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Feedback" required></textarea>
         <button type="submit">Send</button>
     </form>
 </section>
 
-<!-- SCRIPT -->
+<!-- CONTACT -->
+<section class="section" id="contact" data-aos="fade-up">
+    <h2>Contact</h2>
+    <p>Email: rohanbadnale9@gmail.com</p>
+    <p>Phone: 9356837429</p>
+</section>
+
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
 <script>
 AOS.init();
-
-/* DARK MODE */
-function toggleMode(){
-    document.body.classList.toggle("light");
-}
-
-/* TYPING EFFECT */
-const text=["Rohan Badnale","Web Developer","Cloud Learner"];
-let i=0,j=0,isDeleting=false;
-
-function type(){
-    let current=text[i];
-
-    if(!isDeleting){
-        document.querySelector(".typing").textContent=current.slice(0,j++);
-        if(j>current.length){
-            isDeleting=true;
-            setTimeout(type,1000);
-            return;
-        }
-    }else{
-        document.querySelector(".typing").textContent=current.slice(0,j--);
-        if(j===0){
-            isDeleting=false;
-            i=(i+1)%text.length;
-        }
-    }
-    setTimeout(type,120);
-}
-type();
-
-/* FEEDBACK (Firebase ready placeholder) */
-document.getElementById("feedbackForm").addEventListener("submit",function(e){
-    e.preventDefault();
-    alert("Feedback submitted (connect Firebase to make it real)");
-    this.reset();
-});
 </script>
 
 </body>
