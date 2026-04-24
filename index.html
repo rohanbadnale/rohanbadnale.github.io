@@ -3,14 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Rohan Badnale | Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 
 <style>
 
-/* GLOBAL */
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -19,23 +17,22 @@ body {
 }
 
 section {
-    padding: 70px 80px;
+    padding: 60px 80px;
 }
 
 h1, h2, h3 {
     margin-bottom: 10px;
 }
 
-/* HERO */
 .hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #fff;
+    background: white;
 }
 
 .hero-text h1 {
-    font-size: 50px;
+    font-size: 45px;
 }
 
 .hero-text span {
@@ -44,73 +41,36 @@ h1, h2, h3 {
 
 .btn {
     background: #00adb5;
-    color: #fff;
-    padding: 12px 20px;
+    color: white;
+    padding: 12px 18px;
     border-radius: 8px;
-    border: none;
-    cursor: pointer;
     text-decoration: none;
     display: inline-block;
     margin-top: 10px;
+    border: none;
+    cursor: pointer;
 }
 
-.hero img {
-    width: 260px;
-    border-radius: 20px;
-}
-
-/* CARDS */
 .card {
-    background: #fff;
+    background: white;
     padding: 20px;
     border-radius: 12px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
-/* GRID */
 .grid {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
 }
 
-.grid .card {
-    flex: 1;
+footer {
+    text-align: center;
+    background: #222;
+    color: white;
+    padding: 15px;
 }
 
-/* SKILLS */
-.bar {
-    background: #ddd;
-    height: 8px;
-    border-radius: 10px;
-}
-
-.bar div {
-    background: #00adb5;
-    height: 8px;
-}
-
-/* SERVICES */
-.services {
-    display: flex;
-    gap: 20px;
-}
-
-/* TESTIMONIAL */
-.testimonials {
-    display: flex;
-    gap: 20px;
-}
-
-.testimonial {
-    flex: 1;
-    background: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    font-style: italic;
-}
-
-/* FORM */
 form {
     display: flex;
     flex-direction: column;
@@ -123,25 +83,6 @@ input, textarea {
     border: 1px solid #ccc;
 }
 
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #222;
-    color: #fff;
-}
-
-/* MOBILE */
-@media(max-width:768px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-    .services, .testimonials {
-        flex-direction: column;
-    }
-}
-
 </style>
 </head>
 
@@ -151,35 +92,47 @@ footer {
 <section class="hero">
     <div class="hero-text">
         <h1>Hi, I'm <span>Rohan Badnale</span></h1>
-        <p>Aspiring Web Developer & Cloud Enthusiast</p>
+        <p>BCA Student | Web Developer | DSA Learner</p>
 
-        <!-- RESUME DOWNLOAD -->
-        <a href="resume.pdf" download class="btn">Download Resume</a>
-
+        <a class="btn" href="resume.pdf" download>Download Resume</a>
     </div>
 
-    <img src="profile.jpg">
+    <img src="profile.jpg" width="250" style="border-radius:20px;">
 </section>
 
 <!-- ABOUT -->
 <section>
     <h2>About Me</h2>
     <div class="card">
-        <p>I am a passionate BCA student focused on web development, cloud computing and DevOps.</p>
+        <p>
+            My name is Rohan Badnale. I am currently pursuing BCA (Bachelor of Computer Applications)
+            at Swami Vivekananda College with a CGPA of 8.26.
+        </p>
+        <p>
+            I have a strong interest in Software Development and Data Structures & Algorithms (DSA).
+            I enjoy building applications and learning new technologies.
+        </p>
     </div>
 </section>
 
 <!-- EDUCATION -->
 <section>
     <h2>Education</h2>
+
     <div class="card">
         <h3>BCA</h3>
-        <p>Swami Vivekananda Mahavidyalaya</p>
+        <p>Swami Vivekananda College</p>
+        <p>CGPA: 8.26</p>
     </div>
 
     <div class="card">
-        <h3>HSC</h3>
-        <p>Shri Hawgirswami Mahavidyalaya</p>
+        <h3>12th (HSC)</h3>
+        <p>Shri Hawgirswami College</p>
+    </div>
+
+    <div class="card">
+        <h3>10th (SSC)</h3>
+        <p>Vidya Vardhini High School, Udgir</p>
     </div>
 </section>
 
@@ -187,9 +140,10 @@ footer {
 <section>
     <h2>Skills</h2>
     <div class="card">
-        <p>HTML</p><div class="bar"><div style="width:90%"></div></div>
-        <p>CSS</p><div class="bar"><div style="width:85%"></div></div>
-        <p>JavaScript</p><div class="bar"><div style="width:75%"></div></div>
+        <p>C, C++, Java, Python</p>
+        <p>Advanced Java, JavaScript</p>
+        <p>React, Express, MongoDB</p>
+        <p>SQL Database</p>
     </div>
 </section>
 
@@ -197,49 +151,48 @@ footer {
 <section>
     <h2>Projects</h2>
     <div class="grid">
-        <div class="card">
-            <h3>Food Website</h3>
-            <p>Online ordering UI</p>
-        </div>
 
-        <div class="card">
-            <h3>College System</h3>
-            <p>Student management system</p>
-        </div>
+        <div class="card">Employee Management</div>
+        <div class="card">Library Management System</div>
+        <div class="card">Hostel Management</div>
+        <div class="card">Student Attendance System</div>
+        <div class="card">Banking Management</div>
+        <div class="card">Simple Blog Platform</div>
+        <div class="card">E-Commerce Website</div>
+        <div class="card">Online Appointment Booking</div>
+        <div class="card">Event Registration Portal</div>
+        <div class="card">College Notice Board App</div>
+        <div class="card">Social Media Clone</div>
+        <div class="card">Chat Application</div>
+        <div class="card">File Sharing System</div>
+        <div class="card">Online Examination System</div>
+        <div class="card">Live Notification System</div>
+
     </div>
 </section>
 
-<!-- ACHIEVEMENTS -->
+<!-- STRENGTH & WEAKNESS -->
 <section>
-    <h2>Achievements</h2>
+    <h2>Strength & Weakness</h2>
+
     <div class="card">
-        <p>✔ Built multiple mini web projects</p>
-        <p>✔ Learning AWS & DevOps</p>
-        <p>✔ Strong consistency in learning</p>
+        <p><b>Strength:</b> Logical thinking and quick learning of new technologies.</p>
+        <p><b>Weakness:</b> Limited real-world project exposure, improving through practice.</p>
     </div>
 </section>
 
-<!-- TESTIMONIAL -->
+<!-- FEEDBACK SYSTEM -->
 <section>
-    <h2>Testimonials</h2>
-    <div class="testimonials">
-        <div class="testimonial">Hardworking student and quick learner.</div>
-        <div class="testimonial">Strong interest in modern web tech.</div>
-    </div>
-</section>
-
-<!-- FEEDBACK (WITH STORAGE) -->
-<section>
-    <h2>Send Feedback</h2>
+    <h2>Feedback</h2>
 
     <form id="feedbackForm">
-        <input type="text" id="name" placeholder="Name" required>
-        <input type="email" id="email" placeholder="Email" required>
+        <input id="name" type="text" placeholder="Name" required>
+        <input id="email" type="email" placeholder="Email" required>
         <textarea id="message" placeholder="Message" required></textarea>
         <button class="btn" type="submit">Send</button>
     </form>
 
-    <h3 style="margin-top:30px;">Saved Feedback</h3>
+    <h3>Saved Feedback</h3>
     <div id="feedbackList"></div>
 </section>
 
@@ -251,41 +204,41 @@ footer {
 </section>
 
 <footer>
-    <p>© 2026 Rohan Badnale</p>
+    © 2026 Rohan Badnale
 </footer>
 
 <script>
-// FEEDBACK STORAGE SYSTEM
+
 const form = document.getElementById("feedbackForm");
-const feedbackList = document.getElementById("feedbackList");
+const list = document.getElementById("feedbackList");
 
-window.onload = displayFeedback;
+window.onload = showFeedback;
 
-form.addEventListener("submit", function(e) {
+form.addEventListener("submit", function(e){
     e.preventDefault();
 
-    let feedback = {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        message: document.getElementById("message").value
+    let data = {
+        name: name.value,
+        email: email.value,
+        message: message.value
     };
 
-    let stored = JSON.parse(localStorage.getItem("feedbacks")) || [];
-    stored.push(feedback);
+    let old = JSON.parse(localStorage.getItem("fb")) || [];
+    old.push(data);
 
-    localStorage.setItem("feedbacks", JSON.stringify(stored));
+    localStorage.setItem("fb", JSON.stringify(old));
 
     form.reset();
-    displayFeedback();
+    showFeedback();
 });
 
-function displayFeedback() {
-    let stored = JSON.parse(localStorage.getItem("feedbacks")) || [];
+function showFeedback(){
+    let data = JSON.parse(localStorage.getItem("fb")) || [];
 
-    feedbackList.innerHTML = "";
+    list.innerHTML = "";
 
-    stored.forEach(fb => {
-        feedbackList.innerHTML += `
+    data.forEach(fb => {
+        list.innerHTML += `
             <div class="card">
                 <h4>${fb.name}</h4>
                 <p>${fb.email}</p>
@@ -294,6 +247,7 @@ function displayFeedback() {
         `;
     });
 }
+
 </script>
 
 </body>
