@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -10,13 +9,170 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css">
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    transition:0.3s;
+}
+
+/* LIGHT MODE */
+body.light{
+    background:#f5f5f5;
+    color:black;
+}
+
+/* NAV */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+    background:#111827;
+    position:sticky;
+    top:0;
+}
+
+body.light nav{
+    background:white;
+}
+
+nav h2{
+    color:#38bdf8;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+nav ul li a{
+    color:inherit;
+    text-decoration:none;
+}
+
+button{
+    background:#38bdf8;
+    border:none;
+    padding:10px 15px;
+    cursor:pointer;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+/* HERO */
+.hero{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    padding:80px 20px;
+}
+
+.hero h1{
+    font-size:40px;
+}
+
+.hero span{
+    color:#38bdf8;
+}
+
+.profile{
+    width:220px;
+    border-radius:50%;
+    border:4px solid #38bdf8;
+}
+
+/* SECTIONS */
+.section{
+    padding:60px 30px;
+}
+
+h2{
+    color:#38bdf8;
+    margin-bottom:20px;
+}
+
+/* CARD */
+.card{
+    background:#1e293b;
+    padding:20px;
+    margin:10px 0;
+    border-radius:12px;
+}
+
+body.light .card{
+    background:white;
+}
+
+/* PROJECT */
+.project-container{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.project-img{
+    width:100%;
+    border-radius:10px;
+}
+
+/* SKILLS */
+.bar{
+    background:#334155;
+    height:10px;
+    border-radius:5px;
+    margin-bottom:10px;
+}
+
+.bar div{
+    height:10px;
+    background:#38bdf8;
+}
+
+/* FORM */
+form{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    max-width:400px;
+}
+
+input,textarea{
+    padding:10px;
+    border-radius:5px;
+    border:none;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .hero{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    nav ul{
+        display:none;
+    }
+
+    .project-container{
+        flex-direction:column;
+    }
+}
+</style>
+
 </head>
 
 <body>
 
-<!-- NAVBAR -->
-
+<!-- NAV -->
 <nav>
     <h2>Rohan</h2>
     <ul>
@@ -25,180 +181,126 @@
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#feedback">Feedback</a></li>
-        <li><a href="#contact">Contact</a></li>
     </ul>
+
+    <button onclick="toggleMode()">🌙</button>
 </nav>
 
 <!-- HERO -->
-
 <section class="hero">
-    <div class="hero-text" data-aos="fade-right">
-        <h1>Hi, I'm <span>Rohan Badnale</span></h1>
-        <p>Aspiring Web Developer & Cloud Enthusiast</p>
-
-```
-    <a href="resume.pdf" download>
+    <div data-aos="fade-right">
+        <h1>Hi, I'm <span class="typing"></span></h1>
+        <p>Web Developer & Cloud Enthusiast</p>
         <button>Download Resume</button>
-    </a>
-</div>
+    </div>
 
-<img src="profile.jpg" class="profile" data-aos="fade-left">
-```
-
+    <img src="profile.jpg" class="profile" data-aos="fade-left">
 </section>
 
 <!-- ABOUT -->
-
-<section id="about" class="section" data-aos="fade-up">
-    <h2>About Me</h2>
-
-```
-<p>
-    Hello! I'm <strong>Rohan Badnale</strong>, a passionate and dedicated BCA student at 
-    Swami Vivekananda Mahavidyalaya, Udgir. I am currently in my 2nd year and 
-    actively learning web development, cloud computing, and DevOps technologies.
-</p>
-
-<p>
-    I completed my SSC from Vidya Vardhini High School and HSC from 
-    Shri Hawgirswami Mahavidyalaya, Udgir. I also have 2 years of experience 
-    working as a Data Operator at Avinash Cargo Private Ltd (ACPL).
-</p>
-
-<p>
-    My strengths include positive thinking, hard work, honesty, and good 
-    communication skills. I enjoy learning new technologies and building projects.
-</p>
-```
-
+<section class="section" id="about">
+    <h2>About</h2>
+    <div class="card">
+        I am a BCA student passionate about Web Development, Cloud & DevOps.
+    </div>
 </section>
 
 <!-- EDUCATION -->
-
-<section id="education" class="section" data-aos="fade-up">
+<section class="section" id="education">
     <h2>Education</h2>
 
-```
-<div class="card">
-    <h3>BCA</h3>
-    <p>Swami Vivekananda Mahavidyalaya, Udgir</p>
-    <p>2025 (Pursuing)</p>
-</div>
-
-<div class="card">
-    <h3>HSC</h3>
-    <p>Shri Hawgirswami Mahavidyalaya, Udgir</p>
-    <p>2022 | 57.50%</p>
-</div>
-
-<div class="card">
-    <h3>SSC</h3>
-    <p>Vidya Vardhini High School</p>
-    <p>2020 | 67.20%</p>
-</div>
-```
-
+    <div class="card">BCA - Pursuing</div>
+    <div class="card">HSC - 57%</div>
+    <div class="card">SSC - 67%</div>
 </section>
 
 <!-- SKILLS -->
+<section class="section" id="skills">
+    <h2>Skills</h2>
 
-<section id="skills" class="section">
-    <h2 data-aos="fade-up">Skills</h2>
+    <p>HTML</p>
+    <div class="bar"><div style="width:90%"></div></div>
 
-```
-<h3>Programming</h3>
-<div class="skill"><p>JavaScript</p><div class="bar"><div style="width:75%"></div></div></div>
-<div class="skill"><p>Python</p><div class="bar"><div style="width:70%"></div></div></div>
-<div class="skill"><p>C</p><div class="bar"><div style="width:65%"></div></div></div>
+    <p>CSS</p>
+    <div class="bar"><div style="width:85%"></div></div>
 
-<h3>Web</h3>
-<div class="skill"><p>HTML</p><div class="bar"><div style="width:90%"></div></div></div>
-<div class="skill"><p>CSS</p><div class="bar"><div style="width:85%"></div></div></div>
-
-<h3>Cloud & DevOps</h3>
-<div class="skill"><p>AWS (Basic)</p><div class="bar"><div style="width:60%"></div></div></div>
-<div class="skill"><p>Docker (Basic)</p><div class="bar"><div style="width:50%"></div></div></div>
-```
-
+    <p>JavaScript</p>
+    <div class="bar"><div style="width:75%"></div></div>
 </section>
 
 <!-- PROJECTS -->
-
-<section id="projects" class="section">
-    <h2 data-aos="fade-up">Projects</h2>
+<section class="section" id="projects">
+    <h2>Projects</h2>
 
     <div class="project-container">
 
-        <!-- Project 1 -->
-        <div class="card" data-aos="zoom-in">
+        <div class="card">
             <img src="project1.jpg" class="project-img">
-
-            <h3>Food Ordering Website</h3>
-            <p>Online food ordering web app with user-friendly interface.</p>
-
-            <div class="btn-group">
-                <a href="https://github.com/rohanbadnale" target="_blank">
-                    <button class="btn">GitHub</button>
-                </a>
-
-                <button class="btn demo" onclick="showDemo('food')">
-                    Live Demo
-                </button>
-            </div>
+            <h3>Food Ordering App</h3>
         </div>
 
-        <!-- Project 2 -->
-        <div class="card" data-aos="zoom-in">
+        <div class="card">
             <img src="project2.jpg" class="project-img">
-
-            <h3>College Management System</h3>
-            <p>Manage student data with simple dashboard UI.</p>
-
-            <div class="btn-group">
-                <a href="https://github.com/rohanbadnale" target="_blank">
-                    <button class="btn">GitHub</button>
-                </a>
-
-                <button class="btn demo" onclick="showDemo('college')">
-                    Live Demo
-                </button>
-            </div>
+            <h3>College System</h3>
         </div>
 
     </div>
-
-    <!-- Demo Output Box -->
-    <div id="demo-box" class="demo-box"></div>
 </section>
 
 <!-- FEEDBACK -->
-
-<section id="feedback" class="section" data-aos="fade-up">
+<section class="section" id="feedback">
     <h2>Feedback</h2>
 
-```
-<form>
-    <input type="text" placeholder="Your Name" required>
-    <input type="email" placeholder="Your Email" required>
-    <textarea placeholder="Your Feedback" required></textarea>
-    <button type="submit">Send</button>
-</form>
-```
-
+    <form id="feedbackForm">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <textarea id="message" placeholder="Message" required></textarea>
+        <button type="submit">Send</button>
+    </form>
 </section>
 
-<!-- CONTACT -->
-
-<section id="contact" class="section" data-aos="fade-up">
-    <h2>Contact</h2>
-    <p>Email: rohanbadnale9@gmail.com</p>
-    <p>Phone: 9356837429</p>
-</section>
-
+<!-- SCRIPT -->
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
 <script>
-AOS.init({ duration: 1000 });
+AOS.init();
+
+/* DARK MODE */
+function toggleMode(){
+    document.body.classList.toggle("light");
+}
+
+/* TYPING EFFECT */
+const text=["Rohan Badnale","Web Developer","Cloud Learner"];
+let i=0,j=0,isDeleting=false;
+
+function type(){
+    let current=text[i];
+
+    if(!isDeleting){
+        document.querySelector(".typing").textContent=current.slice(0,j++);
+        if(j>current.length){
+            isDeleting=true;
+            setTimeout(type,1000);
+            return;
+        }
+    }else{
+        document.querySelector(".typing").textContent=current.slice(0,j--);
+        if(j===0){
+            isDeleting=false;
+            i=(i+1)%text.length;
+        }
+    }
+    setTimeout(type,120);
+}
+type();
+
+/* FEEDBACK (Firebase ready placeholder) */
+document.getElementById("feedbackForm").addEventListener("submit",function(e){
+    e.preventDefault();
+    alert("Feedback submitted (connect Firebase to make it real)");
+    this.reset();
+});
 </script>
 
 </body>
