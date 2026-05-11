@@ -16,12 +16,12 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    scroll-behavior:smooth;
     font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
 }
 
 body{
-    background:#030712;
+    background:#020617;
     color:white;
     overflow-x:hidden;
 }
@@ -30,23 +30,20 @@ body{
 
 .bg-animation{
     position:fixed;
-    width:100%;
-    height:100%;
     top:0;
     left:0;
-    overflow:hidden;
+    width:100%;
+    height:100%;
     z-index:-1;
+    overflow:hidden;
 }
 
 .bg-animation span{
     position:absolute;
-    display:block;
-    width:25px;
-    height:25px;
-    background:rgba(0,255,255,0.08);
-    animation:animate 20s linear infinite;
     bottom:-150px;
+    background:rgba(0,255,255,0.08);
     border-radius:50%;
+    animation:move 20s linear infinite;
     box-shadow:0 0 20px cyan;
 }
 
@@ -54,48 +51,45 @@ body{
     left:10%;
     width:80px;
     height:80px;
-    animation-duration:25s;
+    animation-duration:18s;
 }
 
 .bg-animation span:nth-child(2){
-    left:20%;
+    left:25%;
+    width:40px;
+    height:40px;
     animation-duration:12s;
 }
 
 .bg-animation span:nth-child(3){
-    left:35%;
-    width:60px;
-    height:60px;
-    animation-duration:18s;
+    left:40%;
+    width:100px;
+    height:100px;
+    animation-duration:25s;
 }
 
 .bg-animation span:nth-child(4){
-    left:50%;
-    width:100px;
-    height:100px;
-    animation-duration:30s;
+    left:60%;
+    width:50px;
+    height:50px;
+    animation-duration:15s;
 }
 
 .bg-animation span:nth-child(5){
-    left:65%;
-    animation-duration:16s;
-}
-
-.bg-animation span:nth-child(6){
-    left:80%;
-    width:70px;
-    height:70px;
+    left:75%;
+    width:90px;
+    height:90px;
     animation-duration:22s;
 }
 
-.bg-animation span:nth-child(7){
+.bg-animation span:nth-child(6){
     left:90%;
-    width:40px;
-    height:40px;
-    animation-duration:14s;
+    width:60px;
+    height:60px;
+    animation-duration:16s;
 }
 
-@keyframes animate{
+@keyframes move{
 
 0%{
     transform:translateY(0) rotate(0deg);
@@ -120,17 +114,17 @@ header{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    z-index:1000;
     background:rgba(0,0,0,0.3);
     backdrop-filter:blur(10px);
+    z-index:1000;
     border-bottom:1px solid rgba(255,255,255,0.1);
 }
 
 .logo{
     font-size:32px;
     font-weight:700;
-    color:#00f7ff;
-    text-shadow:0 0 15px #00f7ff;
+    color:#00ffff;
+    text-shadow:0 0 15px cyan;
 }
 
 nav a{
@@ -142,11 +136,11 @@ nav a{
 }
 
 nav a:hover{
-    color:#00f7ff;
-    text-shadow:0 0 10px #00f7ff;
+    color:#00ffff;
+    text-shadow:0 0 10px cyan;
 }
 
-/* HERO */
+/* HERO SECTION */
 
 .hero{
     min-height:100vh;
@@ -174,13 +168,13 @@ nav a:hover{
 }
 
 .hero-text span{
-    color:#00f7ff;
-    text-shadow:0 0 20px #00f7ff;
+    color:#00ffff;
+    text-shadow:0 0 15px cyan;
 }
 
 .hero-text h3{
     font-size:35px;
-    color:#00f7ff;
+    color:#00ffff;
     margin-bottom:20px;
 }
 
@@ -200,26 +194,26 @@ nav a:hover{
     padding:15px 35px;
     border-radius:40px;
     text-decoration:none;
+    font-weight:600;
     margin-right:15px;
     transition:0.4s;
-    font-weight:600;
 }
 
 .btn1{
-    background:#00f7ff;
+    background:#00ffff;
     color:black;
-    box-shadow:0 0 20px #00f7ff;
+    box-shadow:0 0 20px cyan;
 }
 
 .btn2{
-    border:2px solid #00f7ff;
-    color:#00f7ff;
+    border:2px solid cyan;
+    color:cyan;
 }
 
 .btn1:hover,
 .btn2:hover{
-    transform:translateY(-5px) scale(1.05);
-    box-shadow:0 0 30px #00f7ff;
+    transform:translateY(-5px);
+    box-shadow:0 0 25px cyan;
 }
 
 .hero-image{
@@ -227,12 +221,12 @@ nav a:hover{
 }
 
 .hero-image img{
-    width:360px;
-    height:360px;
-    border-radius:50%;
+    width:350px;
+    height:350px;
     object-fit:cover;
-    border:6px solid #00f7ff;
-    box-shadow:0 0 50px #00f7ff;
+    border-radius:50%;
+    border:6px solid cyan;
+    box-shadow:0 0 40px cyan;
     animation:float 4s ease-in-out infinite;
 }
 
@@ -252,7 +246,7 @@ nav a:hover{
 
 }
 
-/* SECTIONS */
+/* SECTION */
 
 section{
     padding:100px 10%;
@@ -262,8 +256,8 @@ section{
     text-align:center;
     font-size:50px;
     margin-bottom:60px;
-    color:#00f7ff;
-    text-shadow:0 0 20px #00f7ff;
+    color:#00ffff;
+    text-shadow:0 0 15px cyan;
 }
 
 /* CARDS */
@@ -276,20 +270,20 @@ section{
 
 .card{
     background:rgba(255,255,255,0.05);
-    backdrop-filter:blur(12px);
     border:1px solid rgba(255,255,255,0.1);
+    backdrop-filter:blur(10px);
     padding:30px;
     border-radius:25px;
     transition:0.5s;
 }
 
 .card:hover{
-    transform:translateY(-12px);
-    box-shadow:0 0 30px rgba(0,247,255,0.5);
+    transform:translateY(-10px);
+    box-shadow:0 0 25px rgba(0,255,255,0.5);
 }
 
 .card h3{
-    color:#00f7ff;
+    color:#00ffff;
     margin-bottom:15px;
 }
 
@@ -304,17 +298,17 @@ section{
 }
 
 .bar{
-    background:#111827;
+    background:#1e293b;
     border-radius:30px;
     overflow:hidden;
     margin-top:10px;
 }
 
 .fill{
-    background:linear-gradient(90deg,#00f7ff,#00ff99);
+    background:linear-gradient(90deg,#00ffff,#00ff88);
     padding:12px;
-    font-weight:bold;
     color:black;
+    font-weight:bold;
     text-align:right;
 }
 
@@ -322,6 +316,7 @@ section{
 
 .college-container{
     display:flex;
+    justify-content:space-between;
     align-items:center;
     gap:60px;
     flex-wrap:wrap;
@@ -334,7 +329,7 @@ section{
 .college-info h2{
     font-size:40px;
     margin-bottom:20px;
-    color:#00f7ff;
+    color:#00ffff;
 }
 
 .college-info p{
@@ -349,12 +344,7 @@ section{
 .college-image img{
     width:100%;
     border-radius:25px;
-    box-shadow:0 0 40px rgba(0,247,255,0.5);
-    transition:0.5s;
-}
-
-.college-image img:hover{
-    transform:scale(1.03);
+    box-shadow:0 0 30px rgba(0,255,255,0.5);
 }
 
 .detail-grid{
@@ -371,7 +361,7 @@ section{
 }
 
 .detail-box h3{
-    color:#00f7ff;
+    color:#00ffff;
     margin-bottom:10px;
 }
 
@@ -382,7 +372,7 @@ iframe{
     border:none;
     border-radius:20px;
     margin-top:50px;
-    box-shadow:0 0 20px rgba(0,247,255,0.3);
+    box-shadow:0 0 20px rgba(0,255,255,0.4);
 }
 
 /* FEEDBACK */
@@ -402,7 +392,6 @@ iframe{
     padding:40px;
     border-radius:25px;
     text-align:center;
-    backdrop-filter:blur(10px);
 }
 
 .contact-box h3{
@@ -411,22 +400,22 @@ iframe{
 
 .contact-btn{
     display:inline-block;
-    margin-top:25px;
+    margin-top:20px;
     padding:15px 35px;
-    background:#00f7ff;
+    background:#00ffff;
     color:black;
-    text-decoration:none;
     border-radius:40px;
+    text-decoration:none;
     font-weight:bold;
-    box-shadow:0 0 20px #00f7ff;
+    box-shadow:0 0 20px cyan;
 }
 
 /* FOOTER */
 
 footer{
-    padding:30px;
+    background:#010409;
     text-align:center;
-    background:#020617;
+    padding:30px;
     border-top:1px solid rgba(255,255,255,0.1);
 }
 
@@ -475,11 +464,10 @@ nav{
 <span></span>
 <span></span>
 <span></span>
-<span></span>
 
 </div>
 
-<!-- HEADER -->
+<!-- NAVBAR -->
 
 <header>
 
@@ -513,9 +501,9 @@ nav{
 
 <p>
 Passionate about DevOps, Cloud Computing,
-Artificial Intelligence, Python Development
-and DSA. I love building modern cloud systems,
-AI applications and responsive websites.
+Artificial Intelligence, Python Development,
+DSA and Cloud Infrastructure. I love building
+modern AI applications and beautiful websites.
 </p>
 
 <div class="hero-buttons">
@@ -530,7 +518,9 @@ AI applications and responsive websites.
 
 <div class="hero-image">
 
-<img src="https://i.ibb.co/4pDNDk1/avatar.png">
+<!-- YOUR GITHUB IMAGE -->
+
+<img src="profile.jpg" alt="Rohan">
 
 </div>
 
@@ -552,7 +542,8 @@ AI applications and responsive websites.
 
 <p>
 Quick learner, leadership,
-teamwork and problem-solving skills.
+teamwork and strong
+problem-solving skills.
 </p>
 
 </div>
@@ -562,7 +553,8 @@ teamwork and problem-solving skills.
 <h3>Weakness</h3>
 
 <p>
-Sometimes I focus too much on perfection while building projects.
+Sometimes I focus too much
+on perfection while building projects.
 </p>
 
 </div>
@@ -572,7 +564,8 @@ Sometimes I focus too much on perfection while building projects.
 <h3>Career Goal</h3>
 
 <p>
-Become a successful AI Engineer and DevOps Cloud Architect.
+Become a successful AI Engineer
+and DevOps Cloud Architect.
 </p>
 
 </div>
@@ -588,38 +581,53 @@ Become a successful AI Engineer and DevOps Cloud Architect.
 <h2 class="title">My Skills</h2>
 
 <div class="skill">
+
 <span>Python</span>
+
 <div class="bar">
 <div class="fill" style="width:90%">90%</div>
 </div>
+
 </div>
 
 <div class="skill">
+
 <span>DevOps</span>
+
 <div class="bar">
 <div class="fill" style="width:85%">85%</div>
 </div>
+
 </div>
 
 <div class="skill">
+
 <span>Cloud Computing</span>
+
 <div class="bar">
 <div class="fill" style="width:88%">88%</div>
 </div>
+
 </div>
 
 <div class="skill">
+
 <span>Artificial Intelligence</span>
+
 <div class="bar">
 <div class="fill" style="width:80%">80%</div>
 </div>
+
 </div>
 
 <div class="skill">
+
 <span>DSA</span>
+
 <div class="bar">
 <div class="fill" style="width:75%">75%</div>
 </div>
+
 </div>
 
 </section>
@@ -637,7 +645,8 @@ Become a successful AI Engineer and DevOps Cloud Architect.
 <h3>AI Chatbot</h3>
 
 <p>
-Created AI chatbot using Python and Machine Learning.
+Created AI chatbot using Python
+and Machine Learning.
 </p>
 
 </div>
@@ -647,7 +656,8 @@ Created AI chatbot using Python and Machine Learning.
 <h3>Cloud Hosting</h3>
 
 <p>
-Hosted website on AWS EC2 and Apache Linux server.
+Hosted website on AWS EC2
+and Apache Linux server.
 </p>
 
 </div>
@@ -657,7 +667,8 @@ Hosted website on AWS EC2 and Apache Linux server.
 <h3>DevOps Pipeline</h3>
 
 <p>
-Built CI/CD automation using Docker and Jenkins.
+Built CI/CD automation using
+Docker and Jenkins.
 </p>
 
 </div>
@@ -667,7 +678,8 @@ Built CI/CD automation using Docker and Jenkins.
 <h3>Portfolio Website</h3>
 
 <p>
-Responsive modern portfolio using HTML CSS JavaScript.
+Responsive modern portfolio
+using HTML CSS JavaScript.
 </p>
 
 </div>
@@ -694,33 +706,53 @@ Swami Vivekanand Mahavidyalaya, Udgir
 I am pursuing my education at
 Swami Vivekanand Mahavidyalaya, Udgir.
 My college supports innovation,
-technology, coding, AI, DevOps,
+technology, AI, DevOps,
 Cloud Computing and software development.
 </p>
 
 <div class="detail-grid">
 
 <div class="detail-box">
+
 <h3>Courses</h3>
-<p>AI, Python, Cloud, DevOps & DSA</p>
+
+<p>
+AI, Python, Cloud,
+DevOps & DSA
+</p>
+
 </div>
 
 <div class="detail-box">
+
 <h3>Focus</h3>
-<p>Technology & Innovation</p>
+
+<p>
+Technology & Innovation
+</p>
+
 </div>
 
 <div class="detail-box">
+
 <h3>Location</h3>
-<p>Udgir, Maharashtra</p>
+
+<p>
+Udgir, Maharashtra
+</p>
+
 </div>
 
 </div>
 
 <br>
 
-<a href="https://svmudgir.org/" target="_blank" class="btn1">
+<a href="https://svmudgir.org/"
+target="_blank"
+class="btn1">
+
 Visit College Website
+
 </a>
 
 </div>
@@ -728,7 +760,7 @@ Visit College Website
 <div class="college-image">
 
 <img
-src="https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1200&auto=format&fit=crop"
+src="project1.jpg"
 alt="College">
 
 </div>
@@ -737,8 +769,7 @@ alt="College">
 
 <iframe
 src="https://www.google.com/maps?q=Swami+Vivekanand+Mahavidyalaya+Udgir&output=embed"
-height="350"
-loading="lazy">
+height="350">
 </iframe>
 
 </section>
@@ -754,7 +785,8 @@ loading="lazy">
 <h3>Teacher</h3>
 
 <p>
-Excellent student with strong technical knowledge in Python and Cloud.
+Excellent student with strong
+technical knowledge in Python and Cloud.
 </p>
 
 </div>
@@ -764,7 +796,8 @@ Excellent student with strong technical knowledge in Python and Cloud.
 <h3>Friend</h3>
 
 <p>
-Very hardworking and always ready to learn new technologies.
+Very hardworking and always
+ready to learn new technologies.
 </p>
 
 </div>
@@ -774,7 +807,8 @@ Very hardworking and always ready to learn new technologies.
 <h3>Company HR</h3>
 
 <p>
-Strong DevOps and AI concepts with good communication skills.
+Strong DevOps and AI concepts
+with good communication skills.
 </p>
 
 </div>
@@ -795,8 +829,13 @@ Strong DevOps and AI concepts with good communication skills.
 
 <h3>Location : Mumbai, Maharashtra</h3>
 
-<a href="https://svmudgir.org/" target="_blank" class="contact-btn">
+<a
+href="https://svmudgir.org/"
+target="_blank"
+class="contact-btn">
+
 Visit College Website
+
 </a>
 
 </div>
@@ -812,6 +851,8 @@ Visit College Website
 </h3>
 
 </footer>
+
+<!-- JAVASCRIPT -->
 
 <script>
 
