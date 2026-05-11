@@ -13,87 +13,87 @@
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
-    font-family:'Poppins',sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-    background:#050816;
-    color:white;
-    overflow-x:hidden;
+background:#050816;
+color:white;
+overflow-x:hidden;
 }
 
 /* BACKGROUND */
 
 .background{
-    position:fixed;
-    width:100%;
-    height:100%;
-    z-index:-1;
-    overflow:hidden;
+position:fixed;
+width:100%;
+height:100%;
+z-index:-1;
+overflow:hidden;
 }
 
 .background span{
-    position:absolute;
-    border-radius:50%;
-    animation:move 20s linear infinite;
-    bottom:-150px;
-    opacity:0.4;
+position:absolute;
+border-radius:50%;
+animation:move 20s linear infinite;
+bottom:-150px;
+opacity:0.4;
 }
 
 .background span:nth-child(1){
-    left:10%;
-    width:120px;
-    height:120px;
-    background:#00ffff;
-    animation-duration:18s;
+left:10%;
+width:120px;
+height:120px;
+background:#00ffff;
+animation-duration:18s;
 }
 
 .background span:nth-child(2){
-    left:30%;
-    width:80px;
-    height:80px;
-    background:#ff00ff;
-    animation-duration:12s;
+left:30%;
+width:80px;
+height:80px;
+background:#ff00ff;
+animation-duration:12s;
 }
 
 .background span:nth-child(3){
-    left:50%;
-    width:150px;
-    height:150px;
-    background:#00ff99;
-    animation-duration:25s;
+left:50%;
+width:150px;
+height:150px;
+background:#00ff99;
+animation-duration:25s;
 }
 
 .background span:nth-child(4){
-    left:70%;
-    width:100px;
-    height:100px;
-    background:#ff9900;
-    animation-duration:20s;
+left:70%;
+width:100px;
+height:100px;
+background:#ff9900;
+animation-duration:20s;
 }
 
 .background span:nth-child(5){
-    left:90%;
-    width:130px;
-    height:130px;
-    background:#00ccff;
-    animation-duration:16s;
+left:90%;
+width:130px;
+height:130px;
+background:#00ccff;
+animation-duration:16s;
 }
 
 @keyframes move{
 
 0%{
-    transform:translateY(0) rotate(0deg);
-    opacity:0.5;
+transform:translateY(0) rotate(0deg);
+opacity:0.5;
 }
 
 100%{
-    transform:translateY(-1200px) rotate(720deg);
-    opacity:0;
+transform:translateY(-1200px) rotate(720deg);
+opacity:0;
 }
 
 }
@@ -101,136 +101,136 @@ body{
 /* NAVBAR */
 
 header{
-    position:fixed;
-    width:100%;
-    top:0;
-    left:0;
-    padding:20px 10%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:rgba(0,0,0,0.3);
-    backdrop-filter:blur(12px);
-    z-index:1000;
+position:fixed;
+width:100%;
+top:0;
+left:0;
+padding:20px 10%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,0.3);
+backdrop-filter:blur(12px);
+z-index:1000;
 }
 
 .logo{
-    font-size:32px;
-    font-weight:700;
-    color:#00ffff;
-    text-shadow:0 0 15px #00ffff;
+font-size:32px;
+font-weight:700;
+color:#00ffff;
+text-shadow:0 0 15px #00ffff;
 }
 
 nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:25px;
-    transition:0.3s;
-    font-weight:500;
+color:white;
+text-decoration:none;
+margin-left:25px;
+transition:0.3s;
+font-weight:500;
 }
 
 nav a:hover{
-    color:#00ffff;
+color:#00ffff;
 }
 
 /* HERO */
 
 .hero{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:120px 10%;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:120px 10%;
 }
 
 .hero-container{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:80px;
-    flex-wrap:wrap;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:80px;
+flex-wrap:wrap;
 }
 
 .hero-text{
-    max-width:650px;
+max-width:650px;
 }
 
 .hero-text h1{
-    font-size:70px;
-    margin-bottom:10px;
+font-size:70px;
+margin-bottom:10px;
 }
 
 .hero-text span{
-    color:#00ffff;
+color:#00ffff;
 }
 
 .hero-text h3{
-    font-size:35px;
-    color:#ff00ff;
-    margin-bottom:20px;
+font-size:35px;
+color:#ff00ff;
+margin-bottom:20px;
 }
 
 .hero-text p{
-    font-size:18px;
-    line-height:1.9;
-    color:#d1d5db;
+font-size:18px;
+line-height:1.9;
+color:#d1d5db;
 }
 
 .hero-buttons{
-    margin-top:35px;
+margin-top:35px;
 }
 
 .btn1,
 .btn2{
-    display:inline-block;
-    padding:15px 35px;
-    border-radius:40px;
-    text-decoration:none;
-    font-weight:600;
-    margin-right:15px;
-    margin-top:15px;
-    transition:0.4s;
+display:inline-block;
+padding:15px 35px;
+border-radius:40px;
+text-decoration:none;
+font-weight:600;
+margin-right:15px;
+margin-top:15px;
+transition:0.4s;
 }
 
 .btn1{
-    background:linear-gradient(45deg,#00ffff,#00ff99);
-    color:black;
-    box-shadow:0 0 20px #00ffff;
+background:linear-gradient(45deg,#00ffff,#00ff99);
+color:black;
+box-shadow:0 0 20px #00ffff;
 }
 
 .btn2{
-    border:2px solid #ff00ff;
-    color:#ff00ff;
+border:2px solid #ff00ff;
+color:#ff00ff;
 }
 
 .btn1:hover,
 .btn2:hover{
-    transform:translateY(-5px);
-    box-shadow:0 0 30px #ff00ff;
+transform:translateY(-5px);
+box-shadow:0 0 30px #ff00ff;
 }
 
 .hero-image img{
-    width:350px;
-    height:350px;
-    border-radius:50%;
-    object-fit:cover;
-    border:6px solid #00ffff;
-    box-shadow:0 0 40px #00ffff;
-    animation:float 4s ease-in-out infinite;
+width:350px;
+height:350px;
+border-radius:50%;
+object-fit:cover;
+border:6px solid #00ffff;
+box-shadow:0 0 40px #00ffff;
+animation:float 4s ease-in-out infinite;
 }
 
 @keyframes float{
 
 0%{
-    transform:translateY(0);
+transform:translateY(0);
 }
 
 50%{
-    transform:translateY(-20px);
+transform:translateY(-20px);
 }
 
 100%{
-    transform:translateY(0);
+transform:translateY(0);
 }
 
 }
@@ -238,170 +238,170 @@ nav a:hover{
 /* SECTION */
 
 section{
-    padding:100px 10%;
+padding:100px 10%;
 }
 
 .title{
-    text-align:center;
-    font-size:50px;
-    margin-bottom:60px;
-    color:#00ffff;
+text-align:center;
+font-size:50px;
+margin-bottom:60px;
+color:#00ffff;
 }
 
 /* CARDS */
 
 .cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
 }
 
 .card{
-    background:rgba(255,255,255,0.05);
-    backdrop-filter:blur(12px);
-    border:1px solid rgba(255,255,255,0.1);
-    padding:30px;
-    border-radius:25px;
-    transition:0.5s;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(12px);
+border:1px solid rgba(255,255,255,0.1);
+padding:30px;
+border-radius:25px;
+transition:0.5s;
 }
 
 .card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 0 25px #00ffff;
+transform:translateY(-10px);
+box-shadow:0 0 25px #00ffff;
 }
 
 .card h3{
-    color:#00ffff;
-    margin-bottom:15px;
+color:#00ffff;
+margin-bottom:15px;
 }
 
 /* SKILLS */
 
 .skill{
-    margin:30px 0;
+margin:30px 0;
 }
 
 .skill span{
-    font-size:18px;
+font-size:18px;
 }
 
 .bar{
-    background:#1e293b;
-    border-radius:30px;
-    overflow:hidden;
-    margin-top:10px;
+background:#1e293b;
+border-radius:30px;
+overflow:hidden;
+margin-top:10px;
 }
 
 .fill{
-    background:linear-gradient(90deg,#00ffff,#ff00ff);
-    padding:12px;
-    color:black;
-    font-weight:bold;
-    text-align:right;
+background:linear-gradient(90deg,#00ffff,#ff00ff);
+padding:12px;
+color:black;
+font-weight:bold;
+text-align:right;
 }
 
 /* COLLEGE */
 
 .college-container{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:60px;
-    flex-wrap:wrap;
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:60px;
+flex-wrap:wrap;
 }
 
 .college-info{
-    flex:1;
+flex:1;
 }
 
 .college-info h2{
-    font-size:40px;
-    margin-bottom:20px;
-    color:#00ffff;
+font-size:40px;
+margin-bottom:20px;
+color:#00ffff;
 }
 
 .college-info p{
-    line-height:1.9;
-    color:#d1d5db;
+line-height:1.9;
+color:#d1d5db;
 }
 
 .college-image{
-    flex:1;
+flex:1;
 }
 
 .college-image img{
-    width:100%;
-    border-radius:25px;
-    box-shadow:0 0 30px #00ffff;
+width:100%;
+border-radius:25px;
+box-shadow:0 0 30px #00ffff;
 }
 
 .detail-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-    gap:20px;
-    margin-top:30px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+margin-top:30px;
 }
 
 .detail-box{
-    background:rgba(255,255,255,0.05);
-    padding:20px;
-    border-radius:20px;
+background:rgba(255,255,255,0.05);
+padding:20px;
+border-radius:20px;
 }
 
 .detail-box h3{
-    color:#ff00ff;
+color:#ff00ff;
 }
 
 /* MAP */
 
 iframe{
-    width:100%;
-    border:none;
-    border-radius:20px;
-    margin-top:50px;
-    box-shadow:0 0 20px #00ffff;
+width:100%;
+border:none;
+border-radius:20px;
+margin-top:50px;
+box-shadow:0 0 20px #00ffff;
 }
 
 /* FEEDBACK */
 
 .feedback{
-    background:rgba(255,255,255,0.05);
-    padding:25px;
-    border-radius:20px;
-    margin-bottom:20px;
-    backdrop-filter:blur(10px);
+background:rgba(255,255,255,0.05);
+padding:25px;
+border-radius:20px;
+margin-bottom:20px;
+backdrop-filter:blur(10px);
 }
 
 /* CONTACT */
 
 .contact-box{
-    background:rgba(255,255,255,0.05);
-    padding:40px;
-    border-radius:25px;
-    text-align:center;
+background:rgba(255,255,255,0.05);
+padding:40px;
+border-radius:25px;
+text-align:center;
 }
 
 .contact-box h3{
-    margin:15px 0;
+margin:15px 0;
 }
 
 .contact-btn{
-    display:inline-block;
-    margin-top:25px;
-    padding:15px 35px;
-    background:linear-gradient(45deg,#00ffff,#ff00ff);
-    color:black;
-    text-decoration:none;
-    border-radius:40px;
-    font-weight:bold;
+display:inline-block;
+margin-top:25px;
+padding:15px 35px;
+background:linear-gradient(45deg,#00ffff,#ff00ff);
+color:black;
+text-decoration:none;
+border-radius:40px;
+font-weight:bold;
 }
 
 /* FOOTER */
 
 footer{
-    background:#020617;
-    text-align:center;
-    padding:30px;
+background:#020617;
+text-align:center;
+padding:30px;
 }
 
 /* MOBILE */
@@ -410,25 +410,25 @@ footer{
 
 .hero-container,
 .college-container{
-    flex-direction:column;
-    text-align:center;
+flex-direction:column;
+text-align:center;
 }
 
 .hero-text h1{
-    font-size:45px;
+font-size:45px;
 }
 
 .hero-text h3{
-    font-size:25px;
+font-size:25px;
 }
 
 .hero-image img{
-    width:250px;
-    height:250px;
+width:250px;
+height:250px;
 }
 
 nav{
-    display:none;
+display:none;
 }
 
 }
@@ -439,8 +439,6 @@ nav{
 
 <body>
 
-<!-- BACKGROUND -->
-
 <div class="background">
 
 <span></span>
@@ -450,8 +448,6 @@ nav{
 <span></span>
 
 </div>
-
-<!-- NAVBAR -->
 
 <header>
 
@@ -484,10 +480,11 @@ nav{
 <h3 id="typing"></h3>
 
 <p>
+
 Passionate about DevOps, Cloud Computing,
 Artificial Intelligence, Python Development,
 DSA and modern cloud infrastructure.
-I love building beautiful websites and AI projects.
+
 </p>
 
 <div class="hero-buttons">
@@ -537,8 +534,7 @@ class="btn1">
 
 <p>
 Quick learner, teamwork,
-leadership and strong
-problem-solving skills.
+leadership and strong problem-solving skills.
 </p>
 
 </div>
@@ -548,8 +544,7 @@ problem-solving skills.
 <h3>Weakness</h3>
 
 <p>
-Sometimes I focus too much
-on perfection while creating projects.
+Sometimes I focus too much on perfection.
 </p>
 
 </div>
@@ -647,7 +642,7 @@ Created AI chatbot using Python and Machine Learning.
 
 <div class="card">
 
-<h3>Cloud Hosting</h3>
+<h3>AWS Hosting</h3>
 
 <p>
 Hosted website on AWS EC2 and Apache Linux server.
@@ -670,7 +665,7 @@ Built CI/CD automation using Docker and Jenkins.
 <h3>Portfolio Website</h3>
 
 <p>
-Responsive modern portfolio using HTML CSS JavaScript.
+Responsive portfolio using HTML CSS JavaScript.
 </p>
 
 </div>
@@ -694,32 +689,35 @@ Swami Vivekanand Mahavidyalaya, Udgir
 </h2>
 
 <p>
-I am pursuing my education at
-Swami Vivekanand Mahavidyalaya, Udgir.
-My college supports innovation,
-technology, AI, DevOps,
-Cloud Computing and software development.
+
+I am currently pursuing my
+BCA (Bachelor of Computer Applications)
+degree at Swami Vivekanand Mahavidyalaya, Udgir.
+
 </p>
 
 <div class="detail-grid">
 
 <div class="detail-box">
 
-<h3>Courses</h3>
+<h3>Course</h3>
 
 <p>
-AI, Python, Cloud,
-DevOps & DSA
+BCA
+(Bachelor of Computer Applications)
 </p>
 
 </div>
 
 <div class="detail-box">
 
-<h3>Focus</h3>
+<h3>Skills Learning</h3>
 
 <p>
-Technology & Innovation
+Python,
+AI,
+Cloud Computing,
+DevOps & DSA
 </p>
 
 </div>
@@ -738,7 +736,10 @@ Udgir, Maharashtra
 
 <br>
 
-<a href="https://svmudgir.org/" target="_blank" class="btn1">
+<a
+href="https://svmudgir.org/"
+target="_blank"
+class="btn1">
 
 Visit College Website
 
@@ -782,7 +783,7 @@ Excellent student with strong technical knowledge.
 <h3>Friend</h3>
 
 <p>
-Very hardworking and always ready to learn new technologies.
+Very hardworking and always ready to learn technologies.
 </p>
 
 </div>
@@ -807,17 +808,19 @@ Strong DevOps and AI concepts with good communication skills.
 
 <div class="contact-box">
 
-<h3>📧 Email : rohanbadnale9@gmail.com</h3>
+<h3>📧 rohanbadnale9@gmail.com</h3>
 
-<h3>📱 Phone : +91 9356837429</h3>
+<h3>📱 +91 9356837429</h3>
 
-<h3>📍 Location : Maharashtra, India</h3>
+<h3>📍 Maharashtra, India</h3>
 
-<p style="margin-top:20px; color:#d1d5db; line-height:1.8;">
+<p style="margin-top:20px;color:#d1d5db;line-height:1.8;">
 
 Available for internships,
-DevOps projects, cloud computing,
-AI applications and website development.
+DevOps projects,
+Cloud Computing,
+AI applications
+and website development.
 
 </p>
 
@@ -832,8 +835,6 @@ Send Email
 </div>
 
 </section>
-
-<!-- FOOTER -->
 
 <footer>
 
