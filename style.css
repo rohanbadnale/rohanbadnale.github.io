@@ -189,5 +189,35 @@ footer {
 
     section {
         padding: 50px 20px;
+        /* COLLEGE IMAGE */
+
+.college-image{
+flex:1;
+margin-top:20px;
+}
+
+.college-image img{
+width:100%;
+border-radius:25px;
+box-shadow:0 0 30px #00adb5;
+}
+
+/* SPEECH PHOTO */
+
+.second-photo{
+width:100% !important;
+height:auto !important;
+margin-top:25px;
+border-radius:25px !important;
+border:5px solid #ff00ff !important;
+box-shadow:0 0 35px #ff00ff !important;
+transition:0.4s;
+object-fit:cover;
+}
+
+.second-photo:hover{
+transform:scale(1.02);
+box-shadow:0 0 45px #00ffff !important;
+}
     }
 }
