@@ -191,3 +191,117 @@ footer {
         padding: 50px 20px;
     }
 }
+ PROJECTS */
+
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:35px;
+}
+
+.project-card{
+    background:rgba(255,255,255,0.055);
+    border:1px solid rgba(0,255,255,0.15);
+    border-radius:25px;
+    overflow:hidden;
+    backdrop-filter:blur(15px);
+    transition:0.5s;
+}
+
+.project-card:hover{
+    transform:translateY(-12px);
+    border-color:#00ffff;
+    box-shadow:0 0 35px rgba(0,255,255,0.35);
+}
+
+.project-image{
+    width:100%;
+    height:210px;
+    overflow:hidden;
+    background:#020617;
+}
+
+.project-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:0.5s;
+}
+
+.project-card:hover .project-image img{
+    transform:scale(1.08);
+}
+
+.project-placeholder{
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    font-size:55px;
+    color:#00ffff;
+    gap:10px;
+}
+
+.project-placeholder span{
+    font-size:18px;
+    color:white;
+}
+
+.project-content{
+    padding:28px;
+}
+
+.project-label{
+    font-size:12px;
+    letter-spacing:2px;
+    color:#ff00ff;
+    font-weight:600;
+}
+
+.project-content h3{
+    color:#00ffff;
+    font-size:24px;
+    margin:12px 0;
+}
+
+.project-content p{
+    color:#d1d5db;
+    line-height:1.8;
+}
+
+.tech-stack{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin:20px 0;
+}
+
+.tech-stack span{
+    padding:6px 12px;
+    border-radius:20px;
+    background:rgba(0,255,255,0.08);
+    border:1px solid rgba(0,255,255,0.25);
+    color:#00ffff;
+    font-size:12px;
+}
+
+.project-buttons{
+    margin-top:20px;
+}
+
+.github-btn{
+    display:inline-block;
+    padding:12px 22px;
+    border-radius:30px;
+    text-decoration:none;
+    color:#000;
+    font-weight:600;
+    background:linear-gradient(45deg,#00ffff,#00ff99);
+    transition:0.3s;
+}
+
+.github-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 20px #00ffff;
+}
