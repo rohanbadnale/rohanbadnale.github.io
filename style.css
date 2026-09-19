@@ -305,3 +305,192 @@ footer {
     transform:translateY(-3px);
     box-shadow:0 0 20px #00ffff;
 }
+/* ================================
+   PROJECTS SECTION
+================================ */
+
+#projects {
+    padding: 80px;
+}
+
+#projects .cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+}
+
+/* PROJECT CARD */
+
+#projects .project-card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 0;
+    backdrop-filter: blur(12px);
+    transition: all 0.4s ease;
+}
+
+#projects .project-card:hover {
+    transform: translateY(-10px);
+    border-color: #00ffff;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.35);
+}
+
+/* PROJECT IMAGE */
+
+#projects .project-image {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background: #020617;
+}
+
+#projects .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+#projects .project-card:hover .project-image img {
+    transform: scale(1.07);
+}
+
+/* PLACEHOLDER */
+
+#projects .project-placeholder {
+    width: 100%;
+    height: 220px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0, 173, 181, 0.15),
+            rgba(131, 56, 236, 0.2)
+        );
+
+    color: #00ffff;
+    font-size: 55px;
+}
+
+#projects .project-placeholder span {
+    margin-top: 10px;
+    color: white;
+    font-size: 18px;
+}
+
+/* PROJECT CONTENT */
+
+#projects .project-content {
+    padding: 25px;
+}
+
+#projects .project-label {
+    display: inline-block;
+    color: #ffdd00;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+}
+
+#projects .project-content h3 {
+    color: #00ffff;
+    font-size: 24px;
+    margin: 10px 0 15px;
+}
+
+#projects .project-content p {
+    color: #d1d5db;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+/* TECHNOLOGY TAGS */
+
+#projects .tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+#projects .tech-stack span {
+    display: inline-block;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    background: rgba(0, 255, 255, 0.08);
+
+    border: 1px solid rgba(0, 255, 255, 0.25);
+
+    color: #00ffff;
+
+    font-size: 12px;
+}
+
+/* BUTTON */
+
+#projects .project-buttons {
+    margin-top: 22px;
+}
+
+#projects .github-btn {
+    display: inline-block;
+
+    padding: 11px 20px;
+
+    border-radius: 30px;
+
+    background: linear-gradient(
+        90deg,
+        #00adb5,
+        #00ffff
+    );
+
+    color: #000;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+#projects .github-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px #00ffff;
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 768px) {
+
+    #projects {
+        padding: 50px 20px;
+    }
+
+    #projects .cards {
+        grid-template-columns: 1fr;
+    }
+
+    #projects .project-image {
+        height: 200px;
+    }
+
+    #projects .project-placeholder {
+        height: 200px;
+    }
+
+}
