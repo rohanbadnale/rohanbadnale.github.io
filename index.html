@@ -643,41 +643,313 @@ and DevOps Cloud Architect.
 
 </section>
 
+```html
 <!-- PROJECTS -->
 <section id="projects">
 
-    <h2 class="title">My Projects</h2>
+    <h2 class="title">Featured Projects</h2>
 
-    <div class="cards">
+    <div class="project-grid">
 
-        <div class="card project-card">
-            <h3>College Online Voting System</h3>
+        <!-- BANKING PROJECT -->
+        <div class="project-card">
 
-            <p>
-                A secure web-based voting platform developed for college
-                elections with student voting and admin result management.
-            </p>
-
-            <div class="tech-stack">
-                <span>Python</span>
-                <span>Flask</span>
-                <span>MySQL</span>
-                <span>HTML</span>
-                <span>CSS</span>
+            <div class="project-image">
+                <img src="bank-project.png"
+                     alt="Shiro Banking Project">
             </div>
 
-            <a href="YOUR_GITHUB_REPO"
-               target="_blank"
-               class="project-btn">
-                🔗 View on GitHub
-            </a>
+            <div class="project-content">
+
+                <span class="project-label">AWS • DEVOPS • FULL STACK</span>
+
+                <h3>Shiro Banking — Bank Management System</h3>
+
+                <p>
+                    A secure and responsive banking web application built
+                    with Python Flask and MySQL. The application includes
+                    authentication, account management, money transfer,
+                    transaction history and other banking operations.
+                </p>
+
+                <div class="tech-stack">
+                    <span>Python</span>
+                    <span>Flask</span>
+                    <span>MySQL</span>
+                    <span>Docker</span>
+                    <span>Nginx</span>
+                    <span>AWS EC2</span>
+                </div>
+
+                <div class="project-buttons">
+
+                    <a href="https://github.com/rohanbadnale/bank-app-aws"
+                       target="_blank"
+                       class="github-btn">
+                        🔗 View on GitHub
+                    </a>
+
+                </div>
+
+            </div>
         </div>
 
-        <!-- More GitHub projects will be added here -->
+
+        <!-- HOSPITAL PROJECT -->
+        <div class="project-card">
+
+            <div class="project-image">
+                <div class="project-placeholder">
+                    🏥
+                    <span>Hospital Management System</span>
+                </div>
+            </div>
+
+            <div class="project-content">
+
+                <span class="project-label">FULL STACK • JAVA</span>
+
+                <h3>Medicare Hospital Management System</h3>
+
+                <p>
+                    A full-stack hospital management application for
+                    managing patients, doctors, appointments, billing
+                    and healthcare operations with secure authentication.
+                </p>
+
+                <div class="tech-stack">
+                    <span>Java</span>
+                    <span>Spring Boot</span>
+                    <span>Spring Security</span>
+                    <span>JWT</span>
+                    <span>React</span>
+                    <span>MySQL</span>
+                </div>
+
+                <div class="project-buttons">
+
+                    <a href="https://github.com/rohanbadnale/Medicare-Hospital-Management-System"
+                       target="_blank"
+                       class="github-btn">
+                        🔗 View on GitHub
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- SMARTTRIP -->
+        <div class="project-card">
+
+            <div class="project-image">
+                <div class="project-placeholder">
+                    🌍
+                    <span>SmartTrip</span>
+                </div>
+            </div>
+
+            <div class="project-content">
+
+                <span class="project-label">WEB APPLICATION</span>
+
+                <h3>SmartTrip</h3>
+
+                <p>
+                    A modern travel-focused web project designed to provide
+                    users with an interactive and responsive travel experience.
+                </p>
+
+                <div class="tech-stack">
+                    <span>JavaScript</span>
+                    <span>HTML</span>
+                    <span>CSS</span>
+                </div>
+
+                <div class="project-buttons">
+
+                    <a href="https://github.com/rohanbadnale/SmartTrip"
+                       target="_blank"
+                       class="github-btn">
+                        🔗 View on GitHub
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- COLLEGE VOTING -->
+        <div class="project-card">
+
+            <div class="project-image">
+                <div class="project-placeholder">
+                    🗳️
+                    <span>College Online Voting</span>
+                </div>
+            </div>
+
+            <div class="project-content">
+
+                <span class="project-label">WEB APPLICATION</span>
+
+                <h3>College Online Voting System</h3>
+
+                <p>
+                    A college voting platform designed to provide students
+                    with an online voting experience and simplify election
+                    management.
+                </p>
+
+                <div class="tech-stack">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+
+                <div class="project-buttons">
+
+                    <a href="https://github.com/rohanbadnale/college-online-voting"
+                       target="_blank"
+                       class="github-btn">
+                        🔗 View on GitHub
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
 
     </div>
 
-</section>>
+</section>
+```
+
+### Add this CSS
+
+```css
+/* PROJECTS */
+
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:35px;
+}
+
+.project-card{
+    background:rgba(255,255,255,0.055);
+    border:1px solid rgba(0,255,255,0.15);
+    border-radius:25px;
+    overflow:hidden;
+    backdrop-filter:blur(15px);
+    transition:0.5s;
+}
+
+.project-card:hover{
+    transform:translateY(-12px);
+    border-color:#00ffff;
+    box-shadow:0 0 35px rgba(0,255,255,0.35);
+}
+
+.project-image{
+    width:100%;
+    height:210px;
+    overflow:hidden;
+    background:#020617;
+}
+
+.project-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:0.5s;
+}
+
+.project-card:hover .project-image img{
+    transform:scale(1.08);
+}
+
+.project-placeholder{
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    font-size:55px;
+    color:#00ffff;
+    gap:10px;
+}
+
+.project-placeholder span{
+    font-size:18px;
+    color:white;
+}
+
+.project-content{
+    padding:28px;
+}
+
+.project-label{
+    font-size:12px;
+    letter-spacing:2px;
+    color:#ff00ff;
+    font-weight:600;
+}
+
+.project-content h3{
+    color:#00ffff;
+    font-size:24px;
+    margin:12px 0;
+}
+
+.project-content p{
+    color:#d1d5db;
+    line-height:1.8;
+}
+
+.tech-stack{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin:20px 0;
+}
+
+.tech-stack span{
+    padding:6px 12px;
+    border-radius:20px;
+    background:rgba(0,255,255,0.08);
+    border:1px solid rgba(0,255,255,0.25);
+    color:#00ffff;
+    font-size:12px;
+}
+
+.project-buttons{
+    margin-top:20px;
+}
+
+.github-btn{
+    display:inline-block;
+    padding:12px 22px;
+    border-radius:30px;
+    text-decoration:none;
+    color:#000;
+    font-weight:600;
+    background:linear-gradient(45deg,#00ffff,#00ff99);
+    transition:0.3s;
+}
+
+.github-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 20px #00ffff;
+}
+```
+
+**Project photo:** मी तुझ्या **Shiro Banking / AWS project** साठी portfolio-style project image तयार केली आहे. ती `bank-project.png` नावाने project folder मध्ये ठेव आणि वरच्या HTML मधील `src="bank-project.png"` तसेच ठेव.
+
+तुझ्या GitHub README नुसार Bank project मध्ये AWS EC2 → Docker → Nginx → Flask/Gunicorn → MySQL architecture आहे, त्यामुळे हा project तुझ्या **Cloud + DevOps profile** शी चांगला match होतो.
+
 
 <!-- COLLEGE -->
 
